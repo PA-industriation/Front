@@ -1,0 +1,113 @@
+<template id="main-header">
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <ul>
+                    <li><a href="https://industriation.ru/contacts/">Контакты и адреса</a></li>
+                    <li><a href="https://industriation.ru/delivery/">Доставка и оплата</a></li>
+                    <li><a href="https://industriation.ru/about/">О компании</a></li>
+                    <li><a href="https://industriation.ru/brands/">Производители</a></li>
+                    <li data-icon="/image/m-icons/analogues.svg"><a href="https://industriation.ru/analogues-products/">Аналоги</a>
+                    </li>
+                    <li data-icon="/image/m-icons/in-stock.svg"><a href="https://industriation.ru/in-stock/">Товары в
+                        наличии</a></li>
+                    <li><a href="https://industriation.ru/for-ul/">Для юридических лиц</a></li>
+                </ul>
+                <div class="header__auth">
+                    <span data-type="login" class="form-popup">Вход / Регистрация</span>
+                </div>
+            </div>
+            <div class="header__middle">
+            <span class="header__logo-link">
+                <img src="./images/icons/main_logo.svg"
+                     alt="Интернет-магазин Промышленная Автоматизация" class="header__logo">
+            </span>
+                <div id="search" class="header__search">
+                    <div class="header__search-box">
+                        <input id="search_header_input" type="search" value=""
+                               placeholder="Введите название товара или артикул" autocomplete="off">
+                        <button id="search-btn">
+                            <i class="icon2-search-m"></i>
+                        </button>
+                        <i class="icon2-close-m header__search-clear" onclick="ppa_search.clearInput();"></i>
+                        <div id="auto-search-result-dropdown"></div>
+                    </div>
+                </div>
+                <div class="header__contacts">
+                    <div class="header__mail copy-hover">
+                        <a href="mailto:info@industriation.ru"
+                           class="title text">info@industriation.ru</a>
+                        <div class="subtitle">Для заявок и обратной связи</div>
+                    </div>
+                    <div class="header__phone">
+                        <a class="title" href="tel:88005507252">8 800 550-72-52</a>
+                        <div class="subtitle">Звонок бесплатный</div>
+                    </div>
+                </div>
+                <div class="header__actions">
+                    <div id="compare-item" class="header__action header__action--desktop">
+                        <span data-sloc="/compare-products/" class="sloc"></span>
+                        <i class="icon2-compare-2-o"></i>
+                        <div class="name">Сравнения</div>
+                        <div class="compare-data"></div>
+                    </div>
+                    <div id="favorite-item" class="header__action header__action--desktop">
+                        <span data-sloc="/wishlist/" class="sloc"></span>
+                        <i class="icon2-favorite-o"></i>
+                        <div class="name">Избранное</div>
+                        <div class="wishlist-data"></div>
+                    </div>
+                    <div class="header__action header__cart">
+                        <div class="up-click" data-sloc="/checkout/"></div>
+                        <i class="icon2-cart-2-O"></i>
+                        <div class="name">Корзина</div>
+                        <div class="header__cart-count">0</div>
+                        <div class="header__cart-dropdown hidden"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__end">
+                <div class="header__nav">
+                    <div class="header__catalog">
+                        <div>
+                            <button class="header__catalog-btn">
+                                <div class="header__catalog-icon">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                                Товары
+                            </button>
+                        </div>
+                        <div>
+                            <ul class="header__nav-menu">
+                                <li><a href="#">Фитинги</a></li>
+                                <li><a href="#">Трубки</a></li>
+                                <li><a href="#">Распределители</a></li>
+                                <li><a href="#">Пневмоцилиндры</a></li>
+                                <li><a href="#">Подготовка воздуха</a></li>
+                                <li><a href="#">Датчики и КИП</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header__order-btn form-popup" data-type="send_order">
+                        Оставить заявку
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+</template>
+<script>
+    class MainHeader extends HTMLElement{
+        constructor() {
+            super();
+            const tpl = document.getElementById('main-header');
+            const clone = tpl.content.cloneNode(true);
+            this.attachShadow({mode:'open'}).appendChild(clone);
+        }
+    }
+    customElements.define('main-header', MainHeader);
+
+</script>

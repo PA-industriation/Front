@@ -1,0 +1,20 @@
+:root {
+    /* Font size */
+    --font-primary: 1.3rem;
+
+    /* Colors */
+    --color-primary: #0094ff;
+    --color-subtitle: #959595;
+    --color-text-link: #587b8e;
+    --color-primary-hover: #007ad6;
+    --color-accent: #ffb400;
+    --color-accent-hover: #ffa000;
+    --color-text-main: #222;
+    --color-text-muted: #474747;
+
+    /* border */
+    --border-radius: 0.8rem;
+
+    /* gap */
+    --gap-main: 2.5rem;
+}

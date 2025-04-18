@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="https://industriation.ru/favicon.ico">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
     <title>Интернет-магазин промышленного оборудования | Промышленная Автоматизация</title>
 </head>
 <body>
+<main-header></main-header>
+
+<script type="module">
+    fetch('header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.body.insertAdjacentHTML('beforeend', html);
+            const script = document.createElement('script');
+            script.src = 'main-header.js';
+            document.body.appendChild(script);
+        });
+</script>
 
 </body>
 </html>
