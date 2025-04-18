@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Glyphter';
+	src: url('../../fonts/icons.woff2') format('woff2'),
+		 url('../../fonts/icons.otf')	format("opentype"),
+         url('../../fonts/icons.svg#Glyphter') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Glyphter2';
+	src: url('../../fonts/icons2.woff2') format('woff2'),
+         url('../../fonts/icons2.otf')	format("opentype"),
+         url('../../fonts/icons2.svg#Glyphter') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.icon-chevron{
+	display: inline-block;
+}
+[class*='icon-']:before{
+	display: inline-block;
+   font-family: 'Glyphter';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+
+[class*='icon2-']:before{
+	display: inline-block;
+   font-family: 'Glyphter2';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+
+
+.right-arrow .icon-chevron.cell{
+	position: relative;
+    left: -1px;
+    top: 1px;
+}
+.left-arrow .icon-chevron.cell{
+	position: relative;
+    left: -1px;
+    top: 1px;
+}
+/*explode*/
+.icon-b-left:before{content:'\0041';}
+.icon-b-right:before{content:'\0042';}
+.icon-b-up:before{content:'\0043';}
+.icon-b-down:before{content:'\0044';}
+.icon-menu:before{content:'\0045';}
+.icon-favorite-o:before{content:'\0046';}
+.icon-favorite:before{content:'\0047';}
+.icon-search:before{content:'\0048';}
+.icon-location-1:before{content:'\0049';}
+.icon-question:before{content:'\004a';}
+.icon-star-o:before{content:'\004b';}
+.icon-star-half:before{content:'\004c';}
+.icon-star:before{content:'\004d';}
+.icon-user-o:before{content:'\004e';}
+.icon-cart:before{content:'\004f';}
+.icon-left:before{content:'\0050';}
+.icon-right:before{content:'\0051';}
+.icon-up:before{content:'\0052';}
+.icon-chevron:before{content:'\0053';}
+.icon-down:before{content:'\0053';}
+.icon-print:before{content:'\0054';}
+.icon-edit:before{content:'\0055';}
+.icon-panda:before{content:'\0056';}
+.icon-radio-o:before{content:'\0057';}
+.icon-radio:before{content:'\0058';}
+.icon-check:before{content:'\0059';}
+.icon-download:before{content:'\005a';}
+.icon-upload:before{content:'\0061';}
+.icon-close:before{content:'\0062';}
+.icon-disk:before{content:'\0063';}
+.icon-exit:before{content:'\0064';}
+.icon-location-2:before{content:'\0065';}
+.icon-location-3:before{content:'\0066';}
+.icon-compare:before{content:'\0067';}
+.icon-play:before{content:'\0068';}
+.icon-3d:before{content:'\0069';}
+.icon-loading-1:before{content:'\006a';}
+.icon-loading-2:before{content:'\006b';}
+.icon-loading-3:before{content:'\006c';}
+.icon-answer:before{content:'\006d';}
+.icon-comment:before{content:'\006e';}
+.icon-b-favorite-o:before{content:'\006f';}
+.icon-b-favorite:before{content:'\0070';}
+.icon-b-compare:before{content:'\0071';}
+.icon-clock:before{content:'\0072';}
+.icon-locked:before{content:'\0073';}
+.icon-attention:before{content:'\0074';}
+.icon-i-compare-o:before{content:'\0075';}
+.icon-i-compare:before{content:'\0076';}
+.icon2-append:before{content:'\0041';}
+.icon2-copy:before{content:'\0042';}
+.icon2-print:before{content:'\0043';}
+.icon2-loading:before{content:'\0044';}
+.icon2-earth:before{content:'\0045';}
+.icon2-answer-l:before{content:'\0046';}
+.icon2-comment-l:before{content:'\0047';}
+.icon2-comment-r:before{content:'\0048';}
+.icon2-answer-2:before{content:'\0049';}
+.icon2-keyboard:before{content:'\004a';}
+.icon2-eyes:before{content:'\004b';}
+.icon2-alert:before{content:'\004c';}
+.icon2-locked:before{content:'\004d';}
+.icon2-calendar:before{content:'\004e';}
+.icon2-info-o:before{content:'\004f';}
+.icon2-question:before{content:'\0050';}
+.icon2-duwnload:before{content:'\0051';}
+.icon2-upload:before{content:'\0052';}
+.icon2-alert-2:before{content:'\0053';}
+.icon2-info:before{content:'\0054';}
+.icon2-append-2:before{content:'\0055';}
+.icon2-rss:before{content:'\0056';}
+.icon2-cart:before{content:'\0057';}
+.icon2-3d:before{content:'\0058';}
+.icon2-search-add:before{content:'\0059';}
+.icon2-favorite-o:before{content:'\005a';}
+.icon2-favorite:before{content:'\0061';}
+.icon2-compare-o:before{content:'\0062';}
+.icon2-compare:before{content:'\0063';}
+.icon2-cart-o:before{content:'\0064';}
+.icon2-compare-2-o:before{content:'\0065';}
+.icon2-compare-2:before{content:'\0066';}
+.icon2-cart-2-O:before{content:'\0067';}
+.icon2-search-m:before{content:'\0068';}
+.icon2-menu-m:before{content:'\0069';}
+.icon2-close-m:before{content:'\006a';}
+.icon2-config-o:before{content:'\006b';}
