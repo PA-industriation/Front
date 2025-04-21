@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Glyphter';
-	src: url('../../fonts/icons.woff2') format('woff2'),
-		 url('../../fonts/icons.otf')	format("opentype"),
-         url('../../fonts/icons.svg#Glyphter') format('svg');
+	src: url('../fonts/icons.woff2') format('woff2'),
+		 url('../fonts/icons.otf')	format("opentype"),
+         url('../fonts/icons.svg#Glyphter') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Glyphter2';
-	src: url('../../fonts/icons2.woff2') format('woff2'),
-         url('../../fonts/icons2.otf')	format("opentype"),
-         url('../../fonts/icons2.svg#Glyphter') format('svg');
+	src: url('../fonts/icons2.woff2') format('woff2'),
+         url('../fonts/icons2.otf')	format("opentype"),
+         url('../fonts/icons2.svg#Glyphter') format('svg');
     font-weight: normal;
     font-style: normal;
 }

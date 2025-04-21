@@ -12,9 +12,9 @@
 @import url("components/_nav.css");
 
 /**** Fonts ****/
-@import url("fonts/_font.css");
-@import url("fonts/_glyphter.css");
-@import url("fonts/_icons.css");
+@import url("../../assets/fonts/_font.css");
+@import url("../../assets/fonts/_glyphter.css");
+@import url("../../assets/fonts/_icons.css");
 
 
 /**** Layouts ****/
