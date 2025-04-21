@@ -3,12 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="src/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="src/presentation/styles/main.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css">
     <title>Интернет-магазин промышленного оборудования | Промышленная Автоматизация</title>
 </head>
 <body>
-    <div id="header"></div>
-    <script type="module" src="/src/main.js"></script>
+<header class="header">
+    <div class="container">
+        <div class="header__top">
+            <ul>
+                <li><a href="#">Контакты и адреса</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Производители</a></li>
+                <li data-icon="/image/m-icons/analogues.svg"><a href="#">Аналоги</a>
+                </li>
+                <li data-icon="/image/m-icons/in-stock.svg"><a href="#">Товары в
+                    наличии</a></li>
+                <li><a href="https://industriation.ru/for-ul/">Для юридических лиц</a></li>
+            </ul>
+            <div class="header__auth">
+                <span data-type="login" class="form-popup">Вход / Регистрация</span>
+            </div>
+        </div>
+        <div class="header__middle">
+            <span class="header__logo-link">
+                <img src="assets/images/icons/main_logo.svg"
+                     alt="Интернет-магазин Промышленная Автоматизация" class="header__logo">
+            </span>
+            <div id="search" class="header__search">
+                <div class="header__search-box">
+                    <input id="search_header_input" type="search" value=""
+                           placeholder="Введите название товара или артикул" autocomplete="off">
+                    <button id="search-btn">
+                        <i class="icon2-search-m"></i>
+                    </button>
+                    <!--                    <i class="icon2-close-m header__search-clear" onclick="ppa_search.clearInput();"></i>-->
+                    <!--                    <div id="auto-search-result-dropdown"></div>-->
+                </div>
+            </div>
+            <div class="header__contacts">
+                <div class="header__mail copy-hover">
+                    <a href="mailto:info@industriation.ru"
+                       class="title text">info@industriation.ru</a>
+                    <div class="subtitle">Для заявок и обратной связи</div>
+                </div>
+                <div class="header__phone">
+                    <a class="title" href="tel:88005507252">8 800 550-72-52</a>
+                    <div class="subtitle">Звонок бесплатный</div>
+                </div>
+            </div>
+            <div class="header__actions">
+                <div id="compare-item" class="header__action header__action--desktop">
+                    <span data-sloc="/compare-products/" class="sloc"></span>
+                    <i class="icon2-compare-2-o"></i>
+                    <div class="name">Сравнения</div>
+                    <div class="compare-data"></div>
+                </div>
+                <div id="favorite-item" class="header__action header__action--desktop">
+                    <span data-sloc="/wishlist/" class="sloc"></span>
+                    <i class="icon2-favorite-o"></i>
+                    <div class="name">Избранное</div>
+                    <div class="wishlist-data"></div>
+                </div>
+                <div class="header__action header__cart">
+                    <div class="up-click" data-sloc="/checkout/"></div>
+                    <i class="icon2-cart-2-O"></i>
+                    <div class="name">Корзина</div>
+                    <!--                    <div class="header__cart-count">0</div>-->
+                    <div class="header__cart-dropdown hidden"></div>
+                </div>
+            </div>
+        </div>
+        <div class="header__end">
+            <div class="header__nav">
+                <div class="header__catalog">
+                    <div>
+                        <button class="header__catalog-btn">
+                            <div class="header__catalog-icon">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            Товары
+                        </button>
+                    </div>
+                    <div>
+                        <ul class="header__nav-menu">
+                            <li class="header__nav-menu-item">
+                                <a href="#">Фитинги</a>
+                                <ul class="header__dropdown categories-list">
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9440-category-40x40.png"
+                                            title="Фитинги цанговые"><span>Фитинги цанговые</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/6374-category-40x40.png"
+                                            title="Фитинги резьбовые пневматические"><span>Фитинги резьбовые пневматические</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/6393-category-40x40.png"
+                                            title="Фитинги с накидной гайкой"><span>Фитинги с накидной гайкой</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/6384-category-40x40.png"
+                                            title="Фитинги ниппельные"><span>Фитинги ниппельные</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/brand-category/new/6399-category-40x40.png"
+                                            title="Кольцевые детали"><span>Кольцевые детали</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-menu-item">
+                                <a href="#">Трубки</a>
+                                <ul class="header__dropdown categories-list">
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9426-category-40x40.png"
+                                            title="Полиуретановые трубки"><span>Полиуретановые трубки</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9428-category-40x40.png"
+                                            title="Полиамидные трубки"><span>Полиамидные трубки</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9431-category-40x40.png"
+                                            title="Тефлоновые трубки"><span>Тефлоновые трубки</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9427-category-40x40.png"
+                                            title="Полиэтиленовые трубки"><span>Полиэтиленовые трубки</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/2520-category-40x40.png"
+                                            title="Трубки спиральные"><span>Трубки спиральные</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9430-category-40x40.png"
+                                            title="Полиэстеровые трубки"><span>Полиэстеровые трубки</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-menu-item">
+                                <a href="#">Распределители</a>
+                                <ul class="header__dropdown categories-list">
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1550-category-40x40.png"
+                                            title="Распределители с электро и пневмоуправлением"><span>Распределители с электро и пневмоуправлением</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1591-category-40x40.png"
+                                            title="Распределители с механическим и ручным управлением"><span>Распределители с механическим и ручным управлением</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1650-category-40x40.png"
+                                            title="Пропорциональные распределители и регуляторы"><span>Пропорциональные распределители и регуляторы</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-menu-item">
+                                <a href="#">Пневмоцилиндры</a>
+                                <ul class="header__dropdown categories-list">
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1136-category-40x40.png"
+                                            title="Штоковые пневмоцилиндры"><span>Штоковые пневмоцилиндры</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1178-category-40x40.png"
+                                            title="Бесштоковые пневмоцилиндры"><span>Бесштоковые пневмоцилиндры</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9446-category-40x40.png"
+                                            title="Поворотные приводы"><span>Поворотные приводы</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1223-category-40x40.png"
+                                            title="Баллонные и диафрагменные приводы"><span>Баллонные и диафрагменные приводы</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-menu-item">
+                                <a href="#">Подготовка воздуха</a>
+                                <ul class="header__dropdown categories-list custom-two-columns">
+                                  <li>
+                                      <div class="dropdown-columns">
+                                          <ul class="dropdown-column">
+                                              <li><a href="#"><img
+                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2318-category-40x40.png"
+                                                      title="Регуляторы давления"><span>Регуляторы давления</span></a></li>
+                                              <li><a href="#"><img
+                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2275-category-40x40.png"
+                                                      title="Фильтры-регуляторы"><span>Фильтры-регуляторы</span></a></li>
+                                              <li><a href="#"><img
+                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2284-category-40x40.png"
+                                                      title="Фильтры пневматические"><span>Фильтры пневматические</span></a></li>
+                                              <li><a href="#"><img
+                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2405-category-40x40.png"
+                                                      title="Манометры и вакуумметры"><span>Манометры и вакуумметры</span></a>
+                                              </li>
+                                              <li><a href="#"><img
+                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2260-category-40x40.png"
+                                                      title="Комбинации блоков подготовки воздуха"><span>Комбинации блоков подготовки воздуха</span></a>
+                                              </li>
+                                              <li><a href="#"><img
+                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2304-category-40x40.png"
+                                                      title="Фильтропатроны"><span>Фильтропатроны</span></a></li>
+                                          </ul>
+                                          <uL>
+                                              <li><a href="#"><img
+                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2342-category-40x40.png"
+                                                      title="Маслораспылители"><span>Маслораспылители</span></a></li>
+                                              <li><a href="#"><img
+                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2384-category-40x40.png"
+                                                      title="Модули разветвления"><span>Модули разветвления</span></a></li>
+                                              <li><a href="#"><img
+                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2396-category-40x40.png"
+                                                      title="Отвод конденсата"><span>Отвод конденсата</span></a></li>
+                                              <li><a href="#"><img
+                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2404-category-40x40.png"
+                                                      title="Усилители давления"><span>Усилители давления</span></a></li>
+                                              <li><a href="#"><img
+                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2377-category-40x40.png"
+                                                      title="Осушители воздуха"><span>Осушители воздуха</span></a></li>
+                                          </uL>
+                                      </div>
+                                  </li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-menu-item">
+                                <a href="#">Датчики и КИП</a>
+                                <ul class="header__dropdown categories-list">
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/2073-category-40x40.png"
+                                            title="Датчики"><span>Датчики</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/5226-category-40x40.png"
+                                            title="Устройства контроля"><span>Устройства контроля</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/brand-category/new/5222-category-40x40.png"
+                                            title="Электротехническое оборудование"><span>Электротехническое оборудование</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/5215-category-40x40.png"
+                                            title="Блоки питания"><span>Блоки питания</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/2754-category-40x40.png"
+                                            title="Провода и кабели"><span>Провода и кабели</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/5225-category-40x40.png"
+                                            title="Измерительные устройства"><span>Измерительные устройства</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/2807-category-40x40.png"
+                                            title="Разъемы"><span>Разъемы</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__order-btn form-popup" data-type="send_order">
+                    Оставить заявку
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 </body>
 </html>

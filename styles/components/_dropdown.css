@@ -1,0 +1,85 @@
+.header__nav-menu {
+    position: relative;
+
+    > li {
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.header__nav-menu-item {
+            position: relative;
+
+            &:hover > .header__dropdown,
+            &:focus-within > .header__dropdown {
+                display: block;
+            }
+
+            .header__dropdown {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                min-width: 320px;
+                background: var(--color-white);
+                box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+                border-radius: 12px;
+                padding: 16px 0;
+                z-index: 10;
+
+                li {
+                    padding: 0;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        color: var(--color-text-main);
+                        padding: 10px 24px;
+                        font-size: 16px;
+                        white-space: normal;
+                        transition: background 0.15s;
+
+                        &:hover {
+                            background: var(--color-bg-hover);
+                            color: var(--color-primary-hover);
+                        }
+
+                        img {
+                            width: 4rem;
+                            height: 4rem;
+                            object-fit: contain;
+                            flex-shrink: 0;
+                        }
+                    }
+                }
+            }
+
+            .custom-two-columns .dropdown-columns {
+                display: flex;
+                gap: 1rem;
+            }
+            .custom-two-columns .dropdown-column {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                min-width: 320px;
+            }
+        }
+    }
+
+    a {
+        color: var(--color-text-main);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: var(--font-primary);
+        padding: 1.7rem 1.2rem;
+        display: block;
+        transition: color 0.2s;
+
+        &:hover,
+        &:focus {
+            color: var(--color-primary-hover);
+        }
+    }
+}

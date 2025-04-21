@@ -7,14 +7,30 @@
     --color-subtitle: #959595;
     --color-text-link: #587b8e;
     --color-primary-hover: #007ad6;
-    --color-accent: #ffb400;
+    --color-accent: #ff9c00;
     --color-accent-hover: #ffa000;
     --color-text-main: #222;
     --color-text-muted: #474747;
+    --color-white: #fff;
+    --color-bg-hover: #f5f5f5;
+    --color-grey-light: #bbb;
+    --color-border: #e5e5e5;
+    --color-title: #0095d8;
+
+    /* Shadow */
+
+    --shadow-dropdown: 0 4px 24px rgba(0,0,0,0.10);
 
     /* border */
     --border-radius: 0.8rem;
+    --border-radius-lg: 1.2rem;
+    --border-radius-sm: 0.2rem;
 
     /* gap */
     --gap-main: 2.5rem;
+
+    --gap-sm: 0.8rem;
+    --gap-md: 1.4rem;
+    --gap-lg: 2.8rem;
+
 }

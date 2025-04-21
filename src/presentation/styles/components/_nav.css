@@ -1,9 +1,0 @@
-.nav,
-.header__nav-menu {
-    display: flex;
-    align-items: center;
-    gap: var(--gap-main);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
