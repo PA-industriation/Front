@@ -5,11 +5,10 @@
 
 /**** Base ****/
 @import url("base/_base.css");
-/*@import url("base/_typography.css");*/
 
 /**** Components ****/
-/*@import url("components/_button.css");*/
 @import url("components/_dropdown.css");
+@import url("components/_big-cards.css");
 
 /**** Fonts ****/
 @import url("../assets/fonts/_font.css");
@@ -17,4 +16,5 @@
 @import url("../assets/fonts/_icons.css");
 
 /**** Layouts ****/
-@import url("layouts/_header.css");
+@import url("sections/_header.css");
+@import url("sections/_section-showcase.css");

@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="styles/main.css">
     <title>Интернет-магазин промышленного оборудования | Промышленная Автоматизация</title>
 </head>
-<body>
+<body class="container">
 <header class="header">
-    <div class="container">
+    <div>
         <nav class="header__top" aria-label="Верхнее меню">
             <ul class="header__top-list">
                 <li><a href="#">Контакты и адреса</a></li>
@@ -262,9 +262,29 @@
             <div id="catalog-app"></div>
         </div>
     </div>
-
 </header>
-<main></main>
+<main>
+    <section class="category-showcase">
+        <div class="category-showcase__grid">
+            <div class="category-showcase__sidebar">
+                <article class="category-showcase__card">
+                    <a class="category-showcase__card-link" href="https://industriation.ru/c1135/">
+                        <h2 class="category-showcase__card-title">Пневмоцилиндры</h2>
+                        <div class="category-showcase__card-bg">
+                            <img src="https://industriation.ru/image/cache/catalog/categories-png/1135-category-280x280.webp" alt="Пневмоцилиндры">
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="category-showcase__content">
+                <div id="slider-categories"></div>
+                <div id="slider-cards"></div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
 <footer></footer>
 <script type="module" src="./src/main.js"></script>
 </body>
