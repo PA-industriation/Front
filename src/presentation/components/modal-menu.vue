@@ -64,7 +64,6 @@ defineExpose({ toggleMenu })
       <div
           class="catalog-menu__columns"
           :class="{ 'catalog-menu__columns--compact': !activeCategory }"
-
       >
         <!-- Левая колонка -->
         <nav class="catalog-menu__nav">
@@ -77,7 +76,7 @@ defineExpose({ toggleMenu })
                 :data-id="category.id"
                 @mouseenter="setActiveCategory(category)"
             >
-              <a href="#" class="catalog-menu__link">
+              <a :href="category.url" class="catalog-menu__link">
                 <img
                     :src="`https://industriation.ru/image/catalog/categories-icons/${category.id}.svg`"
                     :alt="category.name"
@@ -92,25 +91,30 @@ defineExpose({ toggleMenu })
         <!-- Средняя и правая колонки только при наведении -->
         <template v-if="activeCategory">
           <!-- Средняя колонка -->
-          <div class="catalog-menu__details"
-
-          >
+          <div class="catalog-menu__details">
             <div class="catalog-menu__details-title">
               {{ activeCategory.name }}
             </div>
-            <ul v-if="activeCategory.children && activeCategory.children.length" class="catalog-menu__sublist">
+            <ul
+                v-if="activeCategory.children && activeCategory.children.length"
+                class="catalog-menu__sublist"
+            >
               <li
                   v-for="child in activeCategory.children"
-                  :key="child"
+                  :key="child.url"
                   class="catalog-menu__subitem"
               >
-                {{ child }}
+                <a :href="child.url" class="catalog-menu__subitem-link">
+                  {{ child.name }}
+                </a>
               </li>
             </ul>
           </div>
           <!-- Правая колонка -->
-          <div v-if="activeCategory.top && activeCategory.top.length"
-               class="catalog-menu__top-cards">
+          <div
+              v-if="activeCategory.top && activeCategory.top.length"
+              class="catalog-menu__top-cards"
+          >
             <div
                 v-for="(top, idx) in activeCategory.top"
                 :key="top.name"
@@ -135,8 +139,8 @@ defineExpose({ toggleMenu })
   <Transition name="fade">
     <div v-show="isOpen" class="catalog-menu__overlay"></div>
   </Transition>
-
 </template>
+
 
 
 <style>
