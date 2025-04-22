@@ -209,7 +209,7 @@ header {
                 justify-content: center;
             }
 
-            .header__catalog-btn {
+            .catalog-menu__button {
                 display: flex;
                 align-items: center;
                 gap: 0.8rem;
@@ -227,13 +227,14 @@ header {
 
                 &:hover { background: var(--color-primary-hover); }
 
-                .header__catalog-icon {
+                .catalog-menu__icon {
                     display: flex;
                     flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                     gap: 0.3rem;
-                    margin-right: 0.4rem;
 
-                    .line {
+                    .catalog-menu__line {
                         width: 1.8rem;
                         height: 0.2rem;
                         background: var(--color-white);

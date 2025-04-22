@@ -10,8 +10,8 @@
 <body>
 <header class="header">
     <div class="container">
-        <div class="header__top">
-            <ul>
+        <nav class="header__top" aria-label="Верхнее меню">
+            <ul class="header__top-list">
                 <li><a href="#">Контакты и адреса</a></li>
                 <li><a href="#">Доставка и оплата</a></li>
                 <li><a href="#">О компании</a></li>
@@ -25,13 +25,13 @@
             <div class="header__auth">
                 <span data-type="login" class="form-popup">Вход / Регистрация</span>
             </div>
-        </div>
+        </nav>
         <div class="header__middle">
-            <span class="header__logo-link">
+            <a class="header__logo-link">
                 <img src="assets/images/icons/main_logo.svg"
                      alt="Интернет-магазин Промышленная Автоматизация" class="header__logo">
-            </span>
-            <div id="search" class="header__search">
+            </a>
+            <section id="search" class="header__search" aria-label="Поиск по сайту">
                 <div class="header__search-box">
                     <input id="search_header_input" type="search" value=""
                            placeholder="Введите название товара или артикул" autocomplete="off">
@@ -41,8 +41,8 @@
                     <!--                    <i class="icon2-close-m header__search-clear" onclick="ppa_search.clearInput();"></i>-->
                     <!--                    <div id="auto-search-result-dropdown"></div>-->
                 </div>
-            </div>
-            <div class="header__contacts">
+            </section>
+            <address  class="header__contacts">
                 <div class="header__mail copy-hover">
                     <a href="mailto:info@industriation.ru"
                        class="title text">info@industriation.ru</a>
@@ -52,8 +52,8 @@
                     <a class="title" href="tel:88005507252">8 800 550-72-52</a>
                     <div class="subtitle">Звонок бесплатный</div>
                 </div>
-            </div>
-            <div class="header__actions">
+            </address >
+            <nav class="header__actions" aria-label="Пользовательские действия">
                 <div id="compare-item" class="header__action header__action--desktop">
                     <span data-sloc="/compare-products/" class="sloc"></span>
                     <i class="icon2-compare-2-o"></i>
@@ -73,21 +73,19 @@
                     <!--                    <div class="header__cart-count">0</div>-->
                     <div class="header__cart-dropdown hidden"></div>
                 </div>
-            </div>
+            </nav>
         </div>
         <div class="header__end">
-            <div class="header__nav">
-                <div class="header__catalog">
-                    <div>
-                        <button class="header__catalog-btn">
-                            <div class="header__catalog-icon">
-                                <div class="line"></div>
-                                <div class="line"></div>
-                                <div class="line"></div>
-                            </div>
-                            Товары
-                        </button>
-                    </div>
+            <nav class="header__nav" aria-label="Главное меню">
+                <aside class="header__catalog" aria-label="Каталог товаров">
+                    <button  class="catalog-menu__button" id="external-catalog-btn">
+                        <span class="catalog-menu__icon">
+                          <span class="catalog-menu__line"></span>
+                          <span class="catalog-menu__line"></span>
+                          <span class="catalog-menu__line"></span>
+                        </span>
+                        Товары
+                    </button>
                     <div>
                         <ul class="header__nav-menu">
                             <li class="header__nav-menu-item">
@@ -175,49 +173,55 @@
                             <li class="header__nav-menu-item">
                                 <a href="#">Подготовка воздуха</a>
                                 <ul class="header__dropdown categories-list custom-two-columns">
-                                  <li>
-                                      <div class="dropdown-columns">
-                                          <ul class="dropdown-column">
-                                              <li><a href="#"><img
-                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2318-category-40x40.png"
-                                                      title="Регуляторы давления"><span>Регуляторы давления</span></a></li>
-                                              <li><a href="#"><img
-                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2275-category-40x40.png"
-                                                      title="Фильтры-регуляторы"><span>Фильтры-регуляторы</span></a></li>
-                                              <li><a href="#"><img
-                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2284-category-40x40.png"
-                                                      title="Фильтры пневматические"><span>Фильтры пневматические</span></a></li>
-                                              <li><a href="#"><img
-                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2405-category-40x40.png"
-                                                      title="Манометры и вакуумметры"><span>Манометры и вакуумметры</span></a>
-                                              </li>
-                                              <li><a href="#"><img
-                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2260-category-40x40.png"
-                                                      title="Комбинации блоков подготовки воздуха"><span>Комбинации блоков подготовки воздуха</span></a>
-                                              </li>
-                                              <li><a href="#"><img
-                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2304-category-40x40.png"
-                                                      title="Фильтропатроны"><span>Фильтропатроны</span></a></li>
-                                          </ul>
-                                          <uL>
-                                              <li><a href="#"><img
-                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2342-category-40x40.png"
-                                                      title="Маслораспылители"><span>Маслораспылители</span></a></li>
-                                              <li><a href="#"><img
-                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2384-category-40x40.png"
-                                                      title="Модули разветвления"><span>Модули разветвления</span></a></li>
-                                              <li><a href="#"><img
-                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2396-category-40x40.png"
-                                                      title="Отвод конденсата"><span>Отвод конденсата</span></a></li>
-                                              <li><a href="#"><img
-                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2404-category-40x40.png"
-                                                      title="Усилители давления"><span>Усилители давления</span></a></li>
-                                              <li><a href="#"><img
-                                                      src="https://industriation.ru/image/cache/catalog/categories-png/2377-category-40x40.png"
-                                                      title="Осушители воздуха"><span>Осушители воздуха</span></a></li>
-                                          </uL>
-                                      </div>
-                                  </li>
+                                    <li>
+                                        <div class="dropdown-columns">
+                                            <ul class="dropdown-column">
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2318-category-40x40.png"
+                                                        title="Регуляторы давления"><span>Регуляторы давления</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2275-category-40x40.png"
+                                                        title="Фильтры-регуляторы"><span>Фильтры-регуляторы</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2284-category-40x40.png"
+                                                        title="Фильтры пневматические"><span>Фильтры пневматические</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2405-category-40x40.png"
+                                                        title="Манометры и вакуумметры"><span>Манометры и вакуумметры</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2260-category-40x40.png"
+                                                        title="Комбинации блоков подготовки воздуха"><span>Комбинации блоков подготовки воздуха</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2304-category-40x40.png"
+                                                        title="Фильтропатроны"><span>Фильтропатроны</span></a></li>
+                                            </ul>
+                                            <uL>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2342-category-40x40.png"
+                                                        title="Маслораспылители"><span>Маслораспылители</span></a></li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2384-category-40x40.png"
+                                                        title="Модули разветвления"><span>Модули разветвления</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2396-category-40x40.png"
+                                                        title="Отвод конденсата"><span>Отвод конденсата</span></a></li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2404-category-40x40.png"
+                                                        title="Усилители давления"><span>Усилители давления</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2377-category-40x40.png"
+                                                        title="Осушители воздуха"><span>Осушители воздуха</span></a>
+                                                </li>
+                                            </uL>
+                                        </div>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="header__nav-menu-item">
@@ -250,13 +254,18 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </aside>
                 <div class="header__order-btn form-popup" data-type="send_order">
                     Оставить заявку
                 </div>
-            </div>
+            </nav>
+            <div id="catalog-app"></div>
         </div>
     </div>
+
 </header>
+<main></main>
+<footer></footer>
+<script type="module" src="./src/main.js"></script>
 </body>
 </html>
