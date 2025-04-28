@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles/main.css">
     <title>Интернет-магазин промышленного оборудования | Промышленная Автоматизация</title>
 </head>
-<body class="container">
-<header class="header">
+<body>
+<header class="header container">
     <div>
         <nav class="header__top" aria-label="Верхнее меню">
             <ul class="header__top-list">
@@ -263,7 +263,7 @@
         </div>
     </div>
 </header>
-<main>
+<main class="container">
     <section class="category-showcase">
         <div class="category-showcase__grid">
             <div class="category-showcase__sidebar">
@@ -282,10 +282,102 @@
             </div>
         </div>
     </section>
-
+    <section class="category-product">
+        <div class="category-product__item category-product__item--sensors">
+            <a href="/">
+                <span>Датчики</span>
+                <img src="https://industriation.ru/image/cache/catalog/categories-png/2073-category-170x170.webp" alt="Датчики"/>
+            </a>
+        </div>
+        <div class="category-product__item category-product__item--distributors">
+            <a href="/">
+                <span>Пневматические распределители</span>
+                <img src="https://industriation.ru/image/cache/catalog/categories-png/1549-category-170x170.webp" alt="Пневматические распределители"/>
+            </a>
+        </div>
+        <div class="category-product__item category-product__item--air">
+            <a href="/">
+                <span>Подготовка воздуха</span>
+                <img src="https://industriation.ru/image/cache/catalog/categories-png/2259-category-170x170.webp" alt="Подготовка воздуха"/>
+            </a>
+        </div>
+        <div class="category-product__item category-product__item--tubes">
+            <a href="/">
+                <span>Пневмотрубки и пневмошланги</span>
+                <img src="https://industriation.ru/image/cache/catalog/categories-png/2499-category-170x170.webp" alt="Пневмотрубки и пневмошланги"/>
+            </a>
+        </div>
+    </section>
 </main>
 
-<footer></footer>
+<footer class="site-footer">
+    <div class="site-footer__container container">
+        <section class="site-footer__contacts">
+            <h2 class="site-footer__title">Мы на связи</h2>
+            <address class="site-footer__address">
+                <a href="mailto:info@industriation.ru" class="site-footer__email">info@industriation.ru</a>
+                <span class="site-footer__note">Для заявок и обратной связи</span>
+                <a href="tel:88005507252" class="site-footer__phone">8 800 550-72-52</a>
+                <span class="site-footer__note">Звонок бесплатный</span>
+                <button class="site-footer__callback-btn" data-type="send_order">Оставить заявку</button>
+            </address>
+        </section>
+
+        <nav class="site-footer__nav" aria-label="Информация и ссылки">
+            <ul class="site-footer__nav-list">
+                <li class="site-footer__nav-group">
+                    <h3 class="site-footer__nav-title">Информация для заказа</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="https://industriation.ru/order/" class="site-footer__link">Оформление заказа</a></li>
+                        <li><a href="https://industriation.ru/payment/" class="site-footer__link">Информация об оплате</a></li>
+                        <li><a href="https://industriation.ru/delivery/" class="site-footer__link">Доставка</a></li>
+                        <li><a href="https://industriation.ru/for-ul/" class="site-footer__link">Для юридических лиц</a></li>
+                        <li><a href="https://industriation.ru/refund/" class="site-footer__link">Возврат товаров</a></li>
+                        <li><a href="https://industriation.ru/personal/" class="site-footer__link">Защита личных данных</a></li>
+                        <li><a href="https://industriation.ru/privacy/" class="site-footer__link">Политика конфиденциальности</a></li>
+                    </ul>
+                </li>
+                <li class="site-footer__nav-group">
+                    <h3 class="site-footer__nav-title">Компания</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="https://industriation.ru/about/" class="site-footer__link">О компании</a></li>
+                        <li><a href="https://industriation.ru/contacts/" class="site-footer__link">Адреса и телефоны</a></li>
+                        <li><a href="https://industriation.ru/sertificates/" class="site-footer__link">Сертификаты</a></li>
+                        <li><a href="https://industriation.ru/rekvizity/" class="site-footer__link">Реквизиты</a></li>
+                        <li><a href="https://industriation.ru/news/" class="site-footer__link">Новости</a></li>
+                        <li><a href="https://industriation.ru/articles/" class="site-footer__link">Статьи</a></li>
+                    </ul>
+                </li>
+                <li class="site-footer__nav-group">
+                    <h3 class="site-footer__nav-title">Документация</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="https://industriation.ru/product/" class="site-footer__link">Каталоги продукции</a></li>
+                        <li><a href="https://industriation.ru/technical/" class="site-footer__link">Техническая документация</a></li>
+                        <li><a href="https://industriation.ru/booklets/" class="site-footer__link">Брошюры и буклеты</a></li>
+                        <li><a href="https://industriation.ru/questionnaire/" class="site-footer__link">Опросные листы</a></li>
+                        <li><a href="https://industriation.ru/declarations/" class="site-footer__link">Декларации</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="site-footer__bottom container">
+        <div class="site-footer__copyright">
+            &copy; 2014–{{ date('Y') }} Промышленная Автоматизация
+            <p class="site-footer__rights">Все права защищены.</p>
+        </div>
+        <div class="site-footer__disclaimer">
+            Информация на сайте WWW.INDUSTRIATION.RU не является публичной офертой.
+            <a rel="nofollow" href="/privacy/" class="site-footer__privacy-link">Политика конфиденциальности</a>
+        </div>
+        <div class="site-footer__social">
+            <img src="{{ bagisto_asset('images/vk.svg') }}" alt="ВКонтакте" class="site-footer__social-icon">
+            <img src="{{ bagisto_asset('images/yt.svg') }}" alt="YouTube" class="site-footer__social-icon">
+        </div>
+    </div>
+</footer>
+
 <script type="module" src="./src/main.js"></script>
 </body>
 </html>

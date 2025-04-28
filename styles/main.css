@@ -1,5 +1,4 @@
 /**** Abstract ****/
-@import url("abstracts/_mixins.css");
 @import url("abstracts/_normalize.css");
 @import url("abstracts/_variables.css");
 
@@ -16,5 +15,9 @@
 @import url("../assets/fonts/_icons.css");
 
 /**** Layouts ****/
-@import url("sections/_header.css");
+@import url("layout/_header.css");
+@import url("layout/_footer.css");
+
+/**** Seсtions ****/
 @import url("sections/_section-showcase.css");
+@import url("sections/_section-category-product.css");

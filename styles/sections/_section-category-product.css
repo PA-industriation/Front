@@ -1,0 +1,70 @@
+.category-product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.category-product__item {
+    width: calc(25% - 15px);
+    min-width: 250px;
+    height: 200px;
+    border-radius: 12px;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.category-product__item a {
+    width: 50%;
+}
+
+.category-product__item span {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.category-product__item img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 30px;
+    max-height: 170px;
+    max-width: 170px;
+    z-index: 1;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+}
+
+.category-product__item--sensors {
+    background-color: #c74dd0;
+}
+
+.category-product__item--distributors {
+    background-color: #0a8e8e;
+}
+
+.category-product__item--air {
+    background-color: #f7923d;
+}
+
+.category-product__item--tubes {
+    background-color: #5a5e66;
+}
+
+.category-product__item span {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 15px;
+}
+
+

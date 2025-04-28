@@ -1,7 +1,6 @@
 .category-showcase {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     padding: 2rem 0;
 
     .category-showcase__card{

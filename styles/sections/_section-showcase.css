@@ -1,12 +1,12 @@
 .category-showcase__grid {
     display: grid;
     grid-template-columns: 34rem 1fr;
-    gap: 1.4rem;
+    gap: 0.7rem;
     align-items: flex-start;
 }
 .category-showcase__content {
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
+    gap: 0.8rem;
 }
