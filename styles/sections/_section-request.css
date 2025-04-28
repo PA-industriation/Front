@@ -1,0 +1,64 @@
+.request {
+    margin: 48px 0 0 0;
+    padding: 0;
+}
+
+.request__container {
+    background-image: url("/assets/images/home-form.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 23rem;
+    background-position: 66% 45px;
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    max-width: 100%;
+    padding: 70px 0;
+}
+
+.request__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 28px;
+    color: #222;
+}
+
+.request__text {
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 4rem;
+}
+
+.request__button {
+    display: inline-block;
+    background: #ff9800;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(255,152,0,0.08);
+}
+
+.request__button:hover,
+.request__button:focus {
+    background: #ffb74d;
+    outline: none;
+}
+
+.request__image {
+    flex: 0 0 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.request__image img {
+    width: 120px;
+    height: auto;
+    display: block;
+    opacity: 0.9;
+}

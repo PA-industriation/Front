@@ -169,8 +169,8 @@ function hidePreview() {
 
 /* Стилизация пагинации */
 :deep(.carousel__pagination) {
-  margin: -3rem;
-  transform: translateX(-5%);
+  margin: -1rem;
+  transform: translateX(-15%);
 }
 
 /* Кнопки пагинации */
@@ -205,6 +205,13 @@ function hidePreview() {
   top: 50%;
   transform: translateY(-50%);
   z-index: 100 !important;
+}
+
+:deep(.carousel__prev){
+  transform: translateX(-75%);
+}
+:deep(.carousel__next){
+  transform: translateX(75%);
 }
 
 /* Показывать кнопки навигации при наведении на слайдер */
