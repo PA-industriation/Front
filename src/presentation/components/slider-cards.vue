@@ -1,101 +1,167 @@
 <script setup>
 import 'vue3-carousel/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import productsCards from '../../../data/productsCards.json';
+import {ref} from "vue";
 
-const products = [
-  {
-    id: 1,
-    title: 'Стандартный пневмоцилиндр Naval Pneumatics DSBC-80-200-PPV-A-N3',
-    price: '14 392 ₽',
-    code: '1021104',
-    img: 'https://industriation.ru/image/cache/catalog/categories-png/1135-category-280x280.webp',
-    stock: null,
-    delivery: 'Срок поставки уточняйте у менеджера'
-  },
-  // ... добавьте остальные товары
-]
+const products = ref(productsCards);
+
 </script>
 
 <template>
-  <Carousel :items-to-show="3" :wrap-around="false" :snap-align="'start'" :mouse-drag="true" :breakpoints="{
-    1024: { itemsToShow: 3 },
-    768: { itemsToShow: 2 },
-    480: { itemsToShow: 1 }
-  }">
-    <Slide v-for="product in products" :key="product.id">
-      <div class="product-card">
-        <img :src="product.img" :alt="product.title" class="product-img">
-        <div class="product-info">
-          <div class="product-price">{{ product.price }}</div>
-          <div class="product-code">Артикул: {{ product.code }}</div>
-          <div class="product-title">{{ product.title }}</div>
-          <div v-if="product.stock" class="product-stock">{{ product.stock }}</div>
-          <div class="product-delivery">{{ product.delivery }}</div>
+  <div class="carousel-wrapper tag-slider">
+    <Carousel
+        ref="carousel"
+        :items-to-show="4"
+        :items-to-scroll="4"
+        :wrap-around="true"
+        :paginateByItemsToShow="true"
+        :snap-align="'start'"
+        :pause-autoplay-on-hover="true"
+        :mouse-drag="true"
+    >
+      <Slide v-for="product in products" :key="product.id" class="carousel-slide">
+        <div class="product-card">
+          <img :src="product.img" :alt="product.title" class="product-img" />
+          <div class="product-info">
+            <div class="product-price">{{product.price}}</div>
+            <div class="product-code">Артикул: {{ product.code }}</div>
+            <div class="product-title">{{ product.title }}</div>
+            <div v-if="product.stock > 0" class="product-stock">
+              На складе {{ product.stock }} шт
+            </div>
+            <div v-else class="product-delivery">
+              {{ product.delivery }}
+            </div>
+
+          </div>
         </div>
-      </div>
-    </Slide>
-    <template #addons>
-      <Navigation />
-      <Pagination />
-    </template>
-  </Carousel>
+      </Slide>
+      <template #addons>
+        <Navigation/>
+        <Pagination
+            :paginateByItemsToShow="true"
+        />
+      </template>
+    </Carousel>
+  </div>
 </template>
 
-
 <style scoped>
+
 .product-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  padding: 18px 18px 12px 18px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  min-height: 320px;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+  justify-content: flex-start;
 }
 
 .product-img {
   width: 100%;
-  max-width: 160px;
-  margin: 0 auto 12px auto;
+  height: 210px;
+  object-fit: contain;
+  margin-bottom: 16px;
   display: block;
 }
 
 .product-info {
-  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .product-price {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.product-code {
-  color: #888;
-  font-size: 0.95rem;
-  margin-bottom: 6px;
-}
-
-.product-title {
-  font-size: 1.05rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 
-.product-stock {
-  display: inline-block;
-  background: #19c37d;
-  color: #fff;
-  border-radius: 8px;
-  padding: 2px 10px;
-  font-size: 0.98rem;
-  margin-bottom: 6px;
+.product-code {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #8b8b8b;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.3rem;
+  margin-bottom: 8px;
+}
+
+.product-stock{
+  padding: 6px 14px;
+  border-radius: 12px;
+  margin-top: auto;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: linear-gradient(47deg, #00bb2f -15%, #1f9aab 100%);
 }
 
 .product-delivery {
-  color: #888;
-  font-size: 0.95rem;
+  margin-top: auto;
+  font-size: 1.1rem;
+  color: #4a4a4a;
+}
+
+:deep(.carousel__pagination){
+  margin: -3rem;
+  transform: translateX(-5%);
+}
+
+:deep(.carousel__pagination-button) {
+  width: 8px;
+  height: 8px;
+  margin: 0 .5rem;
+  border-radius: 100%;
+  background: #e6e6e6;
+}
+
+:deep(.carousel__pagination-button--active) {
+  background: #b6b7b9;
+}
+
+:deep(.carousel__prev),
+:deep(.carousel__next) {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, box-shadow 0.2s;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.tag-slider:hover :deep(.carousel__prev),
+.tag-slider:hover :deep(.carousel__next) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+:deep(.carousel__prev svg),
+:deep(.carousel__next svg) {
+  width: 50px;
+  height: 50px;
+  color: #a1a1a1;
 }
 
 </style>
+
+
