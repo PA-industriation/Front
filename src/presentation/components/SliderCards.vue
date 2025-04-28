@@ -1,11 +1,16 @@
 <script setup>
 import 'vue3-carousel/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import productsCards from '../../../data/productsCards.json';
 import '../../../styles/main.css';
 import { ref } from "vue";
 
-const products = ref(productsCards)
+defineProps({
+  products: {
+    type: Array,
+    required: true
+  }
+});
+
 const previewProduct = ref(null)
 const previewPosition = ref({ top: 0, left: 0, width: 0, height: 0 })
 

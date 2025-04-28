@@ -1,9 +1,17 @@
 .category-showcase__grid {
     display: grid;
     grid-template-columns: 34rem 1fr;
-    gap: 0.7rem;
+    gap: 1.4rem;
     align-items: flex-start;
 }
+
+.category-showcase__grid--right {
+    display: grid;
+    grid-template-columns: 1fr 34rem;
+    gap: 1.4rem;
+    align-items: end;
+}
+
 .category-showcase__content {
     min-width: 0;
     display: flex;

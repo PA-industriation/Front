@@ -1,10 +1,14 @@
 <script setup>
 import 'vue3-carousel/carousel.css'
-import categoriesData from '../../../data/slider-categories.json'
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
-import { ref } from "vue"
 
-const sliderCategories = ref(categoriesData)
+defineProps({
+  categories: {
+    type: Array,
+    required: true
+  }
+});
+
 </script>
 
 <template>
@@ -24,7 +28,7 @@ const sliderCategories = ref(categoriesData)
       0: { itemsToShow: 1.5, gap: 6 }
     }"
   >
-    <Slide v-for="category in sliderCategories" :key="category.url">
+    <Slide v-for="category in categories" :key="category.url">
       <a :href="category.url" class="tag-btn">{{ category.title }}</a>
     </Slide>
     <template #addons>
