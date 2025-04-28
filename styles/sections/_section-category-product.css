@@ -21,6 +21,11 @@
     cursor: pointer;
 }
 
+.category-product__item:hover,
+.category-product__item:focus{
+    box-shadow: 0px 2px 15px #000;
+}
+
 .category-product__item a {
     width: 50%;
 }
