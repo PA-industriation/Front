@@ -17,5 +17,8 @@
     "vite": "^6.3.2",
     "vue": "^3.5.13",
     "vue3-carousel": "^0.15.0"
+  },
+  "devDependencies": {
+    "vite-plugin-full-reload": "^1.2.0"
   }
 }

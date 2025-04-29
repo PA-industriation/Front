@@ -1,0 +1,54 @@
+.catalog-section__header{
+    margin-top: 4rem;
+}
+
+.catalog__title{
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 10px 0 22px;
+}
+
+.catalog-section__title{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.catalog-section__count{
+    font-size: 1.5rem;
+    color: rgb(139, 139, 139);
+}
+
+.catalog-section__grid{
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.bg-purpel-to-pink{
+    background: linear-gradient(45deg, #9f43a5 0%, #e87aef 100%);
+}
+
+.bg-darkgreen-to-green{
+    background: linear-gradient(45deg, #006064 0%, #028a90 100%);
+}
+
+.bg-orange-to-lightorange{
+    background: linear-gradient(45deg, #f28039 0%, #f3b055 100%);
+}
+
+.bg-dark-to-grey{
+    background: linear-gradient(45deg, #525262 0%, #727486 100%);
+}
+
+.bg-blue-to-lightblue{
+    background: linear-gradient(45deg, #2b74f4 0%, #45afe3 100%);
+}
+
+.bg-green-to-lightgreen{
+    background: linear-gradient(45deg, #43a431 0%, #96dd0c 100%);
+}
+
+.bg-blue-to-green{
+    background: linear-gradient(45deg, #536189 0%, #6e82b7 100%);
+}
+

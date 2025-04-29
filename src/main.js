@@ -7,6 +7,8 @@ import SliderProductsCard from '../data/productsCards.json';
 import SliderCategoriesData from '../data/slider-categories.json';
 import SliderProductsCard2 from '../data/productsCards2.json';
 import SliderCategoriesData2 from '../data/slider-categories-2.json';
+import CatalogCard from '../src/presentation/components/CatalogCard.vue';
+import '../styles/main.css';
 
 // Монтируем CategoryCard для каждого контейнера с классом .category-card
 document.querySelectorAll('.category-card').forEach(el => {
@@ -50,3 +52,14 @@ const catalogVm = createApp(ModalMenu).mount('#catalog-app');
 document.getElementById('external-catalog-btn').onclick = () => {
     if (catalogVm.toggleMenu) catalogVm.toggleMenu();
 };
+
+document.querySelectorAll('.catalog-card').forEach(el => {
+    const props = {
+        href: el.dataset.href,
+        title: el.dataset.title,
+        imgSrc: el.dataset.imgSrc,
+        imgAlt: el.dataset.imgAlt,
+        bgClass: el.dataset.bgClass
+    }
+    createApp(CatalogCard, props).mount(el)
+})

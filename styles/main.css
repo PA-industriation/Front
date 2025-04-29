@@ -8,6 +8,7 @@
 /**** Components ****/
 @import url("components/_dropdown.css");
 @import url("components/_big-cards.css");
+@import url("components/_breadcrumbs.css");
 
 /**** Fonts ****/
 @import url("../assets/fonts/_font.css");
@@ -25,3 +26,4 @@
 @import url("sections/_section-advantages.css");
 @import url("sections/_section-news.css");
 @import url("sections/_section-articles.css");
+@import url("sections/_section-catalog.css");

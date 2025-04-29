@@ -1,0 +1,1415 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Интернет-магазин промышленного оборудования | Промышленная Автоматизация</title>
+</head>
+<body>
+<header class="header container">
+    <div>
+        <nav class="header__top" aria-label="Верхнее меню">
+            <ul class="header__top-list">
+                <li><a href="#">Контакты и адреса</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Производители</a></li>
+                <li data-icon="/image/m-icons/analogues.svg"><a href="#">Аналоги</a>
+                </li>
+                <li data-icon="/image/m-icons/in-stock.svg"><a href="#">Товары в
+                    наличии</a></li>
+                <li><a href="https://industriation.ru/for-ul/">Для юридических лиц</a></li>
+            </ul>
+            <div class="header__auth">
+                <span data-type="login" class="form-popup">Вход / Регистрация</span>
+            </div>
+        </nav>
+        <div class="header__middle">
+            <a class="header__logo-link">
+                <img src="assets/images/icons/main_logo.svg"
+                     alt="Интернет-магазин Промышленная Автоматизация" class="header__logo">
+            </a>
+            <section id="search" class="header__search" aria-label="Поиск по сайту">
+                <div class="header__search-box">
+                    <input id="search_header_input" type="search" value=""
+                           placeholder="Введите название товара или артикул" autocomplete="off">
+                    <button id="search-btn">
+                        <i class="icon2-search-m"></i>
+                    </button>
+                    <!--                    <i class="icon2-close-m header__search-clear" onclick="ppa_search.clearInput();"></i>-->
+                    <!--                    <div id="auto-search-result-dropdown"></div>-->
+                </div>
+            </section>
+            <address class="header__contacts">
+                <div class="header__mail copy-hover">
+                    <a href="mailto:info@industriation.ru"
+                       class="title text">info@industriation.ru</a>
+                    <div class="subtitle">Для заявок и обратной связи</div>
+                </div>
+                <div class="header__phone">
+                    <a class="title" href="tel:88005507252">8 800 550-72-52</a>
+                    <div class="subtitle">Звонок бесплатный</div>
+                </div>
+            </address>
+            <nav class="header__actions" aria-label="Пользовательские действия">
+                <div id="compare-item" class="header__action header__action--desktop">
+                    <span data-sloc="/compare-products/" class="sloc"></span>
+                    <i class="icon2-compare-2-o"></i>
+                    <div class="name">Сравнения</div>
+                    <div class="compare-data"></div>
+                </div>
+                <div id="favorite-item" class="header__action header__action--desktop">
+                    <span data-sloc="/wishlist/" class="sloc"></span>
+                    <i class="icon2-favorite-o"></i>
+                    <div class="name">Избранное</div>
+                    <div class="wishlist-data"></div>
+                </div>
+                <div class="header__action header__cart">
+                    <div class="up-click" data-sloc="/checkout/"></div>
+                    <i class="icon2-cart-2-O"></i>
+                    <div class="name">Корзина</div>
+                    <!--                    <div class="header__cart-count">0</div>-->
+                    <div class="header__cart-dropdown hidden"></div>
+                </div>
+            </nav>
+        </div>
+        <div class="header__end">
+            <nav class="header__nav" aria-label="Главное меню">
+                <aside class="header__catalog" aria-label="Каталог товаров">
+                    <button class="catalog-menu__button" id="external-catalog-btn">
+                        <span class="catalog-menu__icon">
+                          <span class="catalog-menu__line"></span>
+                          <span class="catalog-menu__line"></span>
+                          <span class="catalog-menu__line"></span>
+                        </span>
+                        Товары
+                    </button>
+                    <div>
+                        <ul class="header__nav-menu">
+                            <li class="header__nav-menu-item">
+                                <a href="#">Фитинги</a>
+                                <ul class="header__dropdown categories-list">
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9440-category-40x40.png"
+                                            title="Фитинги цанговые"><span>Фитинги цанговые</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/6374-category-40x40.png"
+                                            title="Фитинги резьбовые пневматические"><span>Фитинги резьбовые пневматические</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/6393-category-40x40.png"
+                                            title="Фитинги с накидной гайкой"><span>Фитинги с накидной гайкой</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/6384-category-40x40.png"
+                                            title="Фитинги ниппельные"><span>Фитинги ниппельные</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/brand-category/new/6399-category-40x40.png"
+                                            title="Кольцевые детали"><span>Кольцевые детали</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-menu-item">
+                                <a href="#">Трубки</a>
+                                <ul class="header__dropdown categories-list">
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9426-category-40x40.png"
+                                            title="Полиуретановые трубки"><span>Полиуретановые трубки</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9428-category-40x40.png"
+                                            title="Полиамидные трубки"><span>Полиамидные трубки</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9431-category-40x40.png"
+                                            title="Тефлоновые трубки"><span>Тефлоновые трубки</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9427-category-40x40.png"
+                                            title="Полиэтиленовые трубки"><span>Полиэтиленовые трубки</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/2520-category-40x40.png"
+                                            title="Трубки спиральные"><span>Трубки спиральные</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9430-category-40x40.png"
+                                            title="Полиэстеровые трубки"><span>Полиэстеровые трубки</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-menu-item">
+                                <a href="#">Распределители</a>
+                                <ul class="header__dropdown categories-list">
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1550-category-40x40.png"
+                                            title="Распределители с электро и пневмоуправлением"><span>Распределители с электро и пневмоуправлением</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1591-category-40x40.png"
+                                            title="Распределители с механическим и ручным управлением"><span>Распределители с механическим и ручным управлением</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1650-category-40x40.png"
+                                            title="Пропорциональные распределители и регуляторы"><span>Пропорциональные распределители и регуляторы</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-menu-item">
+                                <a href="#">Пневмоцилиндры</a>
+                                <ul class="header__dropdown categories-list">
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1136-category-40x40.png"
+                                            title="Штоковые пневмоцилиндры"><span>Штоковые пневмоцилиндры</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1178-category-40x40.png"
+                                            title="Бесштоковые пневмоцилиндры"><span>Бесштоковые пневмоцилиндры</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/9446-category-40x40.png"
+                                            title="Поворотные приводы"><span>Поворотные приводы</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/1223-category-40x40.png"
+                                            title="Баллонные и диафрагменные приводы"><span>Баллонные и диафрагменные приводы</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-menu-item">
+                                <a href="#">Подготовка воздуха</a>
+                                <ul class="header__dropdown categories-list custom-two-columns">
+                                    <li>
+                                        <div class="dropdown-columns">
+                                            <ul class="dropdown-column">
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2318-category-40x40.png"
+                                                        title="Регуляторы давления"><span>Регуляторы давления</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2275-category-40x40.png"
+                                                        title="Фильтры-регуляторы"><span>Фильтры-регуляторы</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2284-category-40x40.png"
+                                                        title="Фильтры пневматические"><span>Фильтры пневматические</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2405-category-40x40.png"
+                                                        title="Манометры и вакуумметры"><span>Манометры и вакуумметры</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2260-category-40x40.png"
+                                                        title="Комбинации блоков подготовки воздуха"><span>Комбинации блоков подготовки воздуха</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2304-category-40x40.png"
+                                                        title="Фильтропатроны"><span>Фильтропатроны</span></a></li>
+                                            </ul>
+                                            <ul>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2342-category-40x40.png"
+                                                        title="Маслораспылители"><span>Маслораспылители</span></a></li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2384-category-40x40.png"
+                                                        title="Модули разветвления"><span>Модули разветвления</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2396-category-40x40.png"
+                                                        title="Отвод конденсата"><span>Отвод конденсата</span></a></li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2404-category-40x40.png"
+                                                        title="Усилители давления"><span>Усилители давления</span></a>
+                                                </li>
+                                                <li><a href="#"><img
+                                                        src="https://industriation.ru/image/cache/catalog/categories-png/2377-category-40x40.png"
+                                                        title="Осушители воздуха"><span>Осушители воздуха</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-menu-item">
+                                <a href="#">Датчики и КИП</a>
+                                <ul class="header__dropdown categories-list">
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/2073-category-40x40.png"
+                                            title="Датчики"><span>Датчики</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/5226-category-40x40.png"
+                                            title="Устройства контроля"><span>Устройства контроля</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/brand-category/new/5222-category-40x40.png"
+                                            title="Электротехническое оборудование"><span>Электротехническое оборудование</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/5215-category-40x40.png"
+                                            title="Блоки питания"><span>Блоки питания</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/2754-category-40x40.png"
+                                            title="Провода и кабели"><span>Провода и кабели</span></a></li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/5225-category-40x40.png"
+                                            title="Измерительные устройства"><span>Измерительные устройства</span></a>
+                                    </li>
+                                    <li><a href="#"><img
+                                            src="https://industriation.ru/image/cache/catalog/categories-png/2807-category-40x40.png"
+                                            title="Разъемы"><span>Разъемы</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="header__order-btn form-popup" data-type="send_order">
+                    Оставить заявку
+                </div>
+            </nav>
+            <div id="catalog-app"></div>
+        </div>
+    </div>
+</header>
+
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+    <div class="breadcrumbs__container">
+        <ul class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrumbs__link" itemprop="item" href="https://industriation.ru/" title="Главная">
+                    <span itemprop="name">Главная</span>
+                    <meta itemprop="position" content="1">
+                </a>
+                <i class="breadcrumbs__icon icon-chevron"></i>
+            </li>
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrumbs__link" itemprop="item" href="https://industriation.ru/catalog/" title="Товары">
+                    <span itemprop="name">Товары</span>
+                    <meta itemprop="position" content="2">
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="catalog container">
+    <h1 class="catalog__title">Каталог продукции</h1>
+    <section class="catalog-section">
+        <header class="catalog-section__header">
+            <h2 class="catalog-section__title">
+                Пневматическое оборудование
+            </h2>
+            <div class="catalog-section__count">244 540 товаров</div>
+        </header>
+        <div class="catalog-section__grid">
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1135/"
+                     data-title="Пневмоцилиндры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1135-category-170x170.webp"
+                     data-img-alt="Пневмоцилиндры"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c4512/"
+                     data-title="Пневматические фитинги и штуцеры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/4512-category-170x170.webp"
+                     data-img-alt="Пневматические фитинги и штуцеры"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1549/"
+                     data-title="Пневматические распределители"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1549-category-170x170.webp"
+                     data-img-alt="Пневматические распределители"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2259/"
+                     data-title="Подготовка воздуха"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2259-category-170x170.webp"
+                     data-img-alt="Подготовка воздуха"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2499/"
+                     data-title="Пневмотрубки и пневмошланги"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2499-category-170x170.webp"
+                     data-img-alt="Пневмотрубки и пневмошланги"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c9447/"
+                     data-title="Принадлежности"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5579-category-170x170.webp"
+                     data-img-alt="Принадлежности"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c4651/"
+                     data-title="Клапаны пневматические"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/category-4651-170x170.webp"
+                     data-img-alt="Клапаны пневматические"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1627/"
+                     data-title="Дроссели пневматические"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1627-category-170x170.webp"
+                     data-img-alt="Дроссели пневматические"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2966/"
+                     data-title="Глушители пневматические"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2966-category-170x170.webp"
+                     data-img-alt="Глушители пневматические"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c4860/"
+                     data-title="Клапаны электромагнитные"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/4860-category-170x170.webp"
+                     data-img-alt="Клапаны электромагнитные"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1815/"
+                     data-title="Пневмоострова"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1815-category-170x170.webp"
+                     data-img-alt="Пневмоострова"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2405/"
+                     data-title="Манометры и вакуумметры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2405-category-170x170.webp"
+                     data-img-alt="Манометры и вакуумметры"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2679/"
+                     data-title="Быстроразъемные соединения пневматические"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2679-category-170x170.webp"
+                     data-img-alt="Быстроразъемные соединения пневматические"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1227/"
+                     data-title="Пневмоприводы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1227-category-170x170.webp"
+                     data-img-alt="Пневмоприводы"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1433/"
+                     data-title="Пневматические захваты"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1433-category-170x170.webp"
+                     data-img-alt="Пневматические захваты"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5525/"
+                     data-title="Клапаны седельные"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5525-category-170x170.webp"
+                     data-img-alt="Клапаны седельные"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2978/"
+                     data-title="Ресиверы воздушные"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2978-category-170x170.webp"
+                     data-img-alt="Ресиверы воздушные"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+        </div>
+
+        <header class="catalog-section__header">
+            <h2 class="catalog-section__title">
+                Датчики и контрольно-измерительные приборы
+            </h2>
+            <div class="catalog-section__count">48 865 товаров</div>
+        </header>
+        <div class="catalog-section__grid">
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2073/"
+                     data-title="Датчики"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2073-category-170x170.webp"
+                     data-img-alt="Датчики"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5226/"
+                     data-title="Устройства контроля"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5226-category-170x170.webp"
+                     data-img-alt="Устройства контроля"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5222/"
+                     data-title="Электротехническое оборудование"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/5222-category-170x170.webp"
+                     data-img-alt="Электротехническое оборудование"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2405/"
+                     data-title="Манометры и вакуумметры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2405-category-170x170.webp"
+                     data-img-alt="Манометры и вакуумметры"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5215/"
+                     data-title="Блоки питания"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5215-category-170x170.webp"
+                     data-img-alt="Блоки питания"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2754/"
+                     data-title="Провода и кабели"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2754-category-170x170.webp"
+                     data-img-alt="Провода и кабели"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5225/"
+                     data-title="Измерительные устройства"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5225-category-170x170.webp"
+                     data-img-alt="Измерительные устройства"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2807/"
+                     data-title="Разъемы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2807-category-170x170.webp"
+                     data-img-alt="Разъемы"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+        </div>
+
+        <header class="catalog-section__header">
+            <h2 class="catalog-section__title">
+                Подшипники
+            </h2>
+            <div class="catalog-section__count">29 464 товара</div>
+        </header>
+        <div class="catalog-section__grid">
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5937/"
+                     data-title="Шариковые подшипники"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5937-category-170x170.webp"
+                     data-img-alt="Шариковые подшипники"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5938/"
+                     data-title="Роликовые подшипники"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5938-category-170x170.webp"
+                     data-img-alt="Роликовые подшипники"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5968/"
+                     data-title="Втулки скольжения"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5968-category-170x170.webp"
+                     data-img-alt="Втулки скольжения"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5940/"
+                     data-title="Корпусные подшипники и корпусные узлы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5940-category-170x170.webp"
+                     data-img-alt="Корпусные подшипники и корпусные узлы"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5960/"
+                     data-title="Подшипниковые разборные узлы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5960-category-170x170.webp"
+                     data-img-alt="Подшипниковые разборные узлы"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5973/"
+                     data-title="Инструмент для технического обслуживания"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5973-category-170x170.webp"
+                     data-img-alt="Инструмент для технического обслуживания"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5939/"
+                     data-title="Роликовые игольчатые подшипники"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5939-category-170x170.webp"
+                     data-img-alt="Роликовые игольчатые подшипники"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6691/"
+                     data-title="Смазки"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6691-category-170x170.webp"
+                     data-img-alt="Смазки"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6607/"
+                     data-title="Линейные подшипники"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6607-category-170x170.webp"
+                     data-img-alt="Линейные подшипники"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c7838/"
+                     data-title="Кольца и шайбы подшипника"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/7838-category-170x170.webp"
+                     data-img-alt="Кольца и шайбы подшипника"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c7831/"
+                     data-title="Узлы подшипников"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/7831-category-170x170.webp"
+                     data-img-alt="Узлы подшипников"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c7828/"
+                     data-title="Подшипники скольжения"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/7828-category-170x170.webp"
+                     data-img-alt="Подшипники скольжения"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5967/"
+                     data-title="Опорные ролики"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5967-category-170x170.webp"
+                     data-img-alt="Опорные ролики"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c7249/"
+                     data-title="Шариковые опоры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/7249-category-170x170.webp"
+                     data-img-alt="Шариковые опоры"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c7821/"
+                     data-title="Поворотные подшипники"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/7821-category-170x170.webp"
+                     data-img-alt="Поворотные подшипники"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c7825/"
+                     data-title="Подшипники фланцевые"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/7825-category-170x170.webp"
+                     data-img-alt="Подшипники фланцевые"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6415/"
+                     data-title="Комбинированные подшипники"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/6415-category-170x170.webp"
+                     data-img-alt="Комбинированные подшипники"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5936/"
+                     data-title="Игольчатые подшипники"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/5936-category-170x170.webp"
+                     data-img-alt="Игольчатые подшипники"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+        </div>
+        <header class="catalog-section__header">
+            <h2 class="catalog-section__title">
+                Общие детали и узлы машин
+            </h2>
+            <div class="catalog-section__count">56 159 товаров</div>
+        </header>
+        <div class="catalog-section__grid">
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c9092/"
+                     data-title="Муфты"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/9092-category-170x170.webp"
+                     data-img-alt="Муфты"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6651/"
+                     data-title="Втулки"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6651-category-170x170.webp"
+                     data-img-alt="Втулки"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6637/"
+                     data-title="Приводные ремни"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6637-category-170x170.webp"
+                     data-img-alt="Приводные ремни"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5973/"
+                     data-title="Инструмент для технического обслуживания"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5973-category-170x170.webp"
+                     data-img-alt="Инструмент для технического обслуживания"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6691/"
+                     data-title="Смазки"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6691-category-170x170.webp"
+                     data-img-alt="Смазки"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6595/"
+                     data-title="Системы линейного перемещения"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6595-category-170x170.webp"
+                     data-img-alt="Системы линейного перемещения"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5941/"
+                     data-title="Шарнирные наконечники"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5941-category-170x170.webp"
+                     data-img-alt="Шарнирные наконечники"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6656/"
+                     data-title="Шкивы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6656-category-170x170.webp"
+                     data-img-alt="Шкивы"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c7318/"
+                     data-title="Манжеты армированные"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/7318-category-170x170.webp"
+                     data-img-alt="Манжеты армированные"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6627/"
+                     data-title="Рукава и шланги"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/6627-catalog-170x170.webp"
+                     data-img-alt="Рукава и шланги"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8620/"
+                     data-title="Запасные части и ремонтные комплекты"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/8620-category-170x170.webp"
+                     data-img-alt="Запасные части и ремонтные комплекты"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6641/"
+                     data-title="Звездочки"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6641-category-170x170.webp"
+                     data-img-alt="Звездочки"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6663/"
+                     data-title="Зубчатые колеса"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6663-category-170x170.webp"
+                     data-img-alt="Зубчатые колеса"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6632/"
+                     data-title="Приводные цепи"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6632-category-170x170.webp"
+                     data-img-alt="Приводные цепи"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6703/"
+                     data-title="Трапецеидальные гайки и винты"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6703-category-170x170.webp"
+                     data-img-alt="Трапецеидальные гайки и винты"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6706/"
+                     data-title="Виброизоляторы (виброопоры)"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6706-category-170x170.webp"
+                     data-img-alt="Виброизоляторы (виброопоры)"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6667/"
+                     data-title="Конические зубчатые пары"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6667-category-170x170.webp"
+                     data-img-alt="Конические зубчатые пары"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6586/"
+                     data-title="Камлоки"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6586-category-170x170.webp"
+                     data-img-alt="Камлоки"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c7429/"
+                     data-title="Смазочное оборудование"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/category-7429-170x170.webp"
+                     data-img-alt="Смазочное оборудование"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6697/"
+                     data-title="Опорно-поворотные устройства"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6697-category-170x170.webp"
+                     data-img-alt="Опорно-поворотные устройства"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6684/"
+                     data-title="Натяжители"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6684-category-170x170.webp"
+                     data-img-alt="Натяжители"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6668/"
+                     data-title="Зубчатые рейки"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6668-category-170x170.webp"
+                     data-img-alt="Зубчатые рейки"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+        </div>
+        <header class="catalog-section__header">
+            <h2 class="catalog-section__title">
+                Запорная и регулирующая арматура
+            </h2>
+            <div class="catalog-section__count">14 057 товаров</div>
+        </header>
+        <div class="catalog-section__grid">
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c6447/"
+                     data-title="Клапаны"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/6447-category-170x170.webp"
+                     data-img-alt="Клапаны"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c3981/"
+                     data-title="Шаровые краны"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/3981-catalog-170x170.webp"
+                     data-img-alt="Шаровые краны"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1233/"
+                     data-title="Неполноповоротные приводы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1233-category-170x170.webp"
+                     data-img-alt="Неполноповоротные приводы"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c3845/"
+                     data-title="Задвижки"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/3845-catalog-170x170.webp"
+                     data-img-alt="Задвижки"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c3856/"
+                     data-title="Затворы дисковые"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/3856-category-170x170.webp"
+                     data-img-alt="Затворы дисковые"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c4640/"
+                     data-title="Конденсатоотводчики"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/4640-category-170x170.webp"
+                     data-img-alt="Конденсатоотводчики"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c4330/"
+                     data-title="Компенсаторы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/4330-category-170x170.webp"
+                     data-img-alt="Компенсаторы"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c9445/"
+                     data-title="Фильтры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/9445-category-170x170.webp"
+                     data-img-alt="Фильтры"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5301/"
+                     data-title="Воздухоотводчики"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5301-category-170x170.webp"
+                     data-img-alt="Воздухоотводчики"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c4235/"
+                     data-title="Фитинги трубопроводной арматуры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/4235-catalog-170x170.webp"
+                     data-img-alt="Фитинги трубопроводной арматуры"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c4147/"
+                     data-title="Затворы и краны с приводами"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/4147-category-170x170.webp"
+                     data-img-alt="Затворы и краны с приводами"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5207/"
+                     data-title="Фланцы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5207-category-170x170.webp"
+                     data-img-alt="Фланцы"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c4648/"
+                     data-title="Смотровые стекла"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/4648-category-170x170.webp"
+                     data-img-alt="Смотровые стекла"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5491/"
+                     data-title="Регуляторы перепада давления"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5491-category-170x170.webp"
+                     data-img-alt="Регуляторы перепада давления"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c9432/"
+                     data-title="Электромагнитные катушки для запорной арматуры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/9432-category-170x170.webp"
+                     data-img-alt="Электромагнитные катушки для запорной арматуры"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5493/"
+                     data-title="Крепеж"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5493-category-170x170.webp"
+                     data-img-alt="Крепеж"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5280/"
+                     data-title="Принадлежности к запорной арматуре"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5280-category-170x170.webp"
+                     data-img-alt="Принадлежности к запорной арматуре"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5291/"
+                     data-title="Сепараторы для пара и сжатого воздуха"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5291-category-170x170.webp"
+                     data-img-alt="Сепараторы для пара и сжатого воздуха"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c9434/"
+                     data-title="Индикаторы давления"
+                     data-img-src="https://industriation.ru/image/catalog/categories-png/9434-category.webp"
+                     data-img-alt="Индикаторы давления"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+        </div>
+        <header class="catalog-section__header">
+            <h2 class="catalog-section__title">
+                Гидравлическое оборудование
+            </h2>
+            <div class="catalog-section__count">6 020 товаров</div>
+        </header>
+        <div class="catalog-section__grid">
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8350/"
+                     data-title="Фитинги гидравлические"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8350-category-170x170.webp"
+                     data-img-alt="Фитинги гидравлические"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8251/"
+                     data-title="Модульная аппаратура"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8251-category-170x170.webp"
+                     data-img-alt="Модульная аппаратура"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8211/"
+                     data-title="Распределители гидравлические"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8211-category-170x170.webp"
+                     data-img-alt="Распределители гидравлические"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8359/"
+                     data-title="Средства измерения"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8359-category-170x170.webp"
+                     data-img-alt="Средства измерения"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c7921/"
+                     data-title="Быстроразъемные соединения гидравлические"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/7921-category-170x170.webp"
+                     data-img-alt="Быстроразъемные соединения гидравлические"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8139/"
+                     data-title="Насосы гидравлические"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8139-category-170x170.webp"
+                     data-img-alt="Насосы гидравлические"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8200/"
+                     data-title="Регуляторы расхода гидравлические"
+                     data-img-src="https://industriation.ru/image/catalog/brand-category/new/8200-category.webp"
+                     data-img-alt="Регуляторы расхода гидравлические"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8309/"
+                     data-title="Фильтры гидравлические"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8309-category-170x170.webp"
+                     data-img-alt="Фильтры гидравлические"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8480/"
+                     data-title="Гидросистемы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8480-category-170x170.webp"
+                     data-img-alt="Гидросистемы"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8240/"
+                     data-title="Клапаны гидравлические"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8240-catalog-170x170.webp"
+                     data-img-alt="Клапаны гидравлические"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8300/"
+                     data-title="Пропорциональные распределители"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8300-category-170x170.webp"
+                     data-img-alt="Пропорциональные распределители"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8277/"
+                     data-title="Гидравлические плиты"
+                     data-img-src="https://industriation.ru/image/catalog/brand-category/new/8277-category.webp"
+                     data-img-alt="Гидравлические плиты"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8161/"
+                     data-title="Аккумуляторы пневмогидравлические"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8161-category-170x170.webp"
+                     data-img-alt="Аккумуляторы пневмогидравлические"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8347/"
+                     data-title="Рукава высокого давления"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8347-category-170x170.webp"
+                     data-img-alt="Рукава высокого давления"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8286/"
+                     data-title="Карты управления и контроллеры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8286-category-170x170.webp"
+                     data-img-alt="Карты управления и контроллеры"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8354/"
+                     data-title="Принадлежности для гидравлических систем"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/8354-category-170x170.webp"
+                     data-img-alt="Принадлежности для гидравлических систем"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8181/"
+                     data-title="Компенсаторы давления фиксированной или регулируемой настройкой"
+                     data-img-src="https://industriation.ru/image/catalog/brand-category/new/8181-category.webp"
+                     data-img-alt="Компенсаторы давления фиксированной или регулируемой настройкой"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+        </div>
+        <header class="catalog-section__header">
+            <h2 class="catalog-section__title">
+                Программируемые устройства
+                <a href="https://industriation.ru/c5147/" class="catalog-section__link">Перейти в раздел</a>
+            </h2>
+            <div class="catalog-section__count">1 308 товаров</div>
+        </header>
+        <div class="catalog-section__grid">
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c9480/"
+                     data-title="Аксессуары к программируемым устройствам"
+                     data-img-src="https://industriation.ru/image/cache/catalog/owen-products/kk1_na_sajt-170x170.webp"
+                     data-img-alt="Аксессуары к программируемым устройствам"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5153/"
+                     data-title="Модули ввода/вывода"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5153-category-170x170.webp"
+                     data-img-alt="Модули ввода/вывода"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5149/"
+                     data-title="Программируемые логические контроллеры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5149-category-170x170.webp"
+                     data-img-alt="Программируемые логические контроллеры"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5152/"
+                     data-title="Панели оператора"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5152-category-170x170.webp"
+                     data-img-alt="Панели оператора"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5148/"
+                     data-title="Программируемые реле"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5148-category-170x170.webp"
+                     data-img-alt="Программируемые реле"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+        </div>
+
+        <header class="catalog-section__header">
+            <h2 class="catalog-section__title">
+                Другие товары
+            </h2>
+            <div class="catalog-section__count">4 339 товаров</div>
+        </header>
+        <div class="catalog-section__grid">
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5587/"
+                     data-title="Насосное оборудование"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5587-category-170x170.webp"
+                     data-img-alt="Насосное оборудование"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c7891/"
+                     data-title="Быстроразъемные соединения"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/7891-category-170x170.webp"
+                     data-img-alt="Быстроразъемные соединения"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+        </div>
+
+        <header class="catalog-section__header">
+            <h2 class="catalog-section__title">
+                Приводная техника
+                <a href="https://industriation.ru/c9479/" class="catalog-section__link">Перейти в раздел</a>
+            </h2>
+            <div class="catalog-section__count">4 651 товар</div>
+        </header>
+        <div class="catalog-section__grid">
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5210/"
+                     data-title="Силовые и коммутационные устройства"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/5210-category-170x170.webp"
+                     data-img-alt="Силовые и коммутационные устройства"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5211/"
+                     data-title="Преобразователи частоты"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5211-category-170x170.webp"
+                     data-img-alt="Преобразователи частоты"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1399/"
+                     data-title="Двигатели и контроллеры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1399-category-170x170.webp"
+                     data-img-alt="Двигатели и контроллеры"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c5212/"
+                     data-title="Устройства плавного пуска"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/5212-category-170x170.webp"
+                     data-img-alt="Устройства плавного пуска"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c8732/"
+                     data-title="Редукторы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/8732-category-170x170.webp"
+                     data-img-alt="Редукторы"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+        </div>
+        <header class="catalog-section__header">
+            <h2 class="catalog-section__title">
+                Вакуумная техника
+            </h2>
+            <div class="catalog-section__count">1 444 товара</div>
+        </header>
+        <div class="catalog-section__grid">
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1486/"
+                     data-title="Генераторы вакуума и эжекторы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1486-category-170x170.webp"
+                     data-img-alt="Генераторы вакуума и эжекторы"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c4735/"
+                     data-title="Вакуумные конфигурируемые захваты"
+                     data-img-src="https://industriation.ru/image/cache/catalog/brand-category/new/4735-category-170x170.webp"
+                     data-img-alt="Вакуумные конфигурируемые захваты"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1515/"
+                     data-title="Вакуумные фильтры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1515-category-170x170.webp"
+                     data-img-alt="Вакуумные фильтры"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c4741/"
+                     data-title="Вакуумметры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/4741-category-170x170.webp"
+                     data-img-alt="Вакуумметры"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1520/"
+                     data-title="Вакуумные клапаны безопасности"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1520-category-170x170.webp"
+                     data-img-alt="Вакуумные клапаны безопасности"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1505/"
+                     data-title="Аксессуары"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1505-category-170x170.webp"
+                     data-img-alt="Аксессуары"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1493/"
+                     data-title="Модульные вакуумные захваты"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1493-category-170x170.webp"
+                     data-img-alt="Модульные вакуумные захваты"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c9470/"
+                     data-title="Вакуумные регуляторы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/airtac-gvr-170x170.webp"
+                     data-img-alt="Вакуумные регуляторы"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1511/"
+                     data-title="Вакуумные компенсаторы"
+                     data-img-src="https://industriation.ru/image/catalog/categories-png/1511-category.webp"
+                     data-img-alt="Вакуумные компенсаторы"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1492/"
+                     data-title="Сопла для вакуумного генератора"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1492-category-170x170.webp"
+                     data-img-alt="Сопла для вакуумного генератора"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1521/"
+                     data-title="Вставки вакуумного захвата"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1521-category-170x170.webp"
+                     data-img-alt="Вставки вакуумного захвата"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+        </div>
+        <header class="catalog-section__header">
+            <h2 class="catalog-section__title">
+                Электромеханическое оборудование
+            </h2>
+            <div class="catalog-section__count">7 872 товара</div>
+        </header>
+        <div class="catalog-section__grid">
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1815/"
+                     data-title="Пневмоострова"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1815-category-170x170.webp"
+                     data-img-alt="Пневмоострова"
+                     data-bg-class="bg-purpel-to-pink"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1321/"
+                     data-title="Электромеханические приводы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1321-category-170x170.webp"
+                     data-img-alt="Электромеханические приводы"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2754/"
+                     data-title="Провода и кабели"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2754-category-170x170.webp"
+                     data-img-alt="Провода и кабели"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2807/"
+                     data-title="Разъемы"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2807-category-170x170.webp"
+                     data-img-alt="Разъемы"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1464/"
+                     data-title="Системы перемещения"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1464-category-170x170.webp"
+                     data-img-alt="Системы перемещения"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c1297/"
+                     data-title="Сервопневматические системы позиционирования"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/1297-category-170x170.webp"
+                     data-img-alt="Сервопневматические системы позиционирования"
+                     data-bg-class="bg-green-to-lightgreen"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2887/"
+                     data-title="Принадлежности для контроллеров"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2887-category-170x170.webp"
+                     data-img-alt="Принадлежности для контроллеров"
+                     data-bg-class="bg-blue-to-green"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2928/"
+                     data-title="Устройства оператора"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2928-category-170x170.webp"
+                     data-img-alt="Устройства оператора"
+                     data-bg-class="bg-blue-to-lightblue"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2883/"
+                     data-title="Электронные контроллеры"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2883-category-170x170.webp"
+                     data-img-alt="Электронные контроллеры"
+                     data-bg-class="bg-dark-to-grey"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2875/"
+                     data-title="Пневматические и электропневматические системы управления"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2875-category-170x170.webp"
+                     data-img-alt="Пневматические и электропневматические системы управления"
+                     data-bg-class="bg-orange-to-lightorange"
+            ></article>
+            <article class="catalog-card"
+                     data-href="https://industriation.ru/c2854/"
+                     data-title="Принадлежности для электрических фитингов"
+                     data-img-src="https://industriation.ru/image/cache/catalog/categories-png/2854-category-170x170.webp"
+                     data-img-alt="Принадлежности для электрических фитингов"
+                     data-bg-class="bg-darkgreen-to-green"
+            ></article>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer__container container">
+        <section class="site-footer__contacts">
+            <h2 class="site-footer__title">Мы на связи</h2>
+            <address class="site-footer__address">
+                <a href="mailto:info@industriation.ru" class="site-footer__email">info@industriation.ru</a>
+                <span class="site-footer__note">Для заявок и обратной связи</span>
+                <a href="tel:88005507252" class="site-footer__phone">8 800 550-72-52</a>
+                <span class="site-footer__note">Звонок бесплатный</span>
+                <button class="site-footer__callback-btn" data-type="send_order">Оставить заявку</button>
+            </address>
+        </section>
+
+        <nav class="site-footer__nav" aria-label="Информация и ссылки">
+            <ul class="site-footer__nav-list">
+                <li class="site-footer__nav-group">
+                    <h3 class="site-footer__nav-title">Информация для заказа</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="https://industriation.ru/order/" class="site-footer__link">Оформление заказа</a>
+                        </li>
+                        <li><a href="https://industriation.ru/payment/" class="site-footer__link">Информация об
+                            оплате</a></li>
+                        <li><a href="https://industriation.ru/delivery/" class="site-footer__link">Доставка</a></li>
+                        <li><a href="https://industriation.ru/for-ul/" class="site-footer__link">Для юридических лиц</a>
+                        </li>
+                        <li><a href="https://industriation.ru/refund/" class="site-footer__link">Возврат товаров</a>
+                        </li>
+                        <li><a href="https://industriation.ru/personal/" class="site-footer__link">Защита личных
+                            данных</a></li>
+                        <li><a href="https://industriation.ru/privacy/" class="site-footer__link">Политика
+                            конфиденциальности</a></li>
+                    </ul>
+                </li>
+                <li class="site-footer__nav-group">
+                    <h3 class="site-footer__nav-title">Компания</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="https://industriation.ru/about/" class="site-footer__link">О компании</a></li>
+                        <li><a href="https://industriation.ru/contacts/" class="site-footer__link">Адреса и телефоны</a>
+                        </li>
+                        <li><a href="https://industriation.ru/sertificates/" class="site-footer__link">Сертификаты</a>
+                        </li>
+                        <li><a href="https://industriation.ru/rekvizity/" class="site-footer__link">Реквизиты</a></li>
+                        <li><a href="https://industriation.ru/news/" class="site-footer__link">Новости</a></li>
+                        <li><a href="https://industriation.ru/articles/" class="site-footer__link">Статьи</a></li>
+                    </ul>
+                </li>
+                <li class="site-footer__nav-group">
+                    <h3 class="site-footer__nav-title">Документация</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="https://industriation.ru/product/" class="site-footer__link">Каталоги продукции</a>
+                        </li>
+                        <li><a href="https://industriation.ru/technical/" class="site-footer__link">Техническая
+                            документация</a></li>
+                        <li><a href="https://industriation.ru/booklets/" class="site-footer__link">Брошюры и буклеты</a>
+                        </li>
+                        <li><a href="https://industriation.ru/questionnaire/" class="site-footer__link">Опросные
+                            листы</a></li>
+                        <li><a href="https://industriation.ru/declarations/" class="site-footer__link">Декларации</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="site-footer__bottom container">
+        <div class="site-footer__copyright">
+            &copy; 2014–{{ date('Y') }} Промышленная Автоматизация
+            <p class="site-footer__rights">Все права защищены.</p>
+        </div>
+        <div class="site-footer__disclaimer">
+            Информация на сайте WWW.INDUSTRIATION.RU не является публичной офертой.
+            <a rel="nofollow" href="/privacy/" class="site-footer__privacy-link">Политика конфиденциальности</a>
+        </div>
+        <div class="site-footer__social">
+            <img src="assets/images/icons/vk.svg" alt="ВКонтакте" class="site-footer__social-icon">
+            <img src="assets/images/icons/youtube.svg" alt="YouTube" class="site-footer__social-icon">
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
