@@ -1,7 +1,6 @@
 <script setup>
 import 'vue3-carousel/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import '../../../styles/main.css';
 import { ref } from "vue";
 
 defineProps({
@@ -167,6 +166,19 @@ function hidePreview() {
   height: 100%;
 }
 
+/* Невидимая "зона-буфера"*/
+:deep(.carousel__viewport::after) {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4px; /* или сколько нужно */
+  height: 100%;
+  z-index: 100;
+  pointer-events: auto;
+  background: transparent;
+}
+
 /* Стилизация пагинации */
 :deep(.carousel__pagination) {
   margin: -1rem;
@@ -236,7 +248,7 @@ function hidePreview() {
 /* Основной контейнер карточки товара */
 .product-card {
   width: 100%;
-  height: 100%;
+  height: 400px;
   background: #fff;
   border-radius: 12px;
   padding: 16px;

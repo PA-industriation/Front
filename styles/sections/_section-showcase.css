@@ -3,6 +3,7 @@
     grid-template-columns: 34rem 1fr;
     gap: 1.4rem;
     align-items: flex-start;
+
 }
 
 .category-showcase__grid--right {
@@ -16,5 +17,5 @@
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1.8rem;
 }
