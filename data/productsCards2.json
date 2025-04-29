@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Стандартный пневмоцилиндр Naval Pneumatics DSBC-80-200-PPV-A-N3",
+    "price": "14 398 ₽",
+    "code": "1021104",
+    "img": "assets/images/products/D15000100119441-210x210.jpg",
+    "stock": null,
+    "delivery": "Срок поставки уточняйте у менеджера"
+  },
+  {
+    "id": 2,
+    "title": "Гидроцилиндр Rexroth CDM1",
+    "price": "18 900 ₽",
+    "code": "1021105",
+    "img": "assets/images/products/D15000100123964-210x210.jpg",
+    "stock": 12,
+    "delivery": "3-5 дней"
+  },
+  {
+    "id": 3,
+    "title": "Пневмоцилиндр Festo ADVU-32-25-A-P-A",
+    "price": "9 800 ₽",
+    "code": "1021106",
+    "img": "assets/images/products/D15000100123971-210x210.jpg",
+    "stock": 5,
+    "delivery": "В наличии"
+  },
+  {
+    "id": 4,
+    "title": "Гидроцилиндр Parker HMI",
+    "price": "22 500 ₽",
+    "code": "1021107",
+    "img": "assets/images/products/D15000100124268-210x210.jpg",
+    "stock": null,
+    "delivery": "1-2 недели"
+  },
+  {
+    "id": 5,
+    "title": "Пневмоцилиндр SMC CD85N20-50-B",
+    "price": "7 400 ₽",
+    "code": "1021108",
+    "img": "assets/images/products/D15000100124273-210x210.jpg",
+    "stock": 20,
+    "delivery": "В наличии"
+  },
+  {
+    "id": 6,
+    "title": "Гидроцилиндр Bosch Rexroth CDL2",
+    "price": "16 300 ₽",
+    "code": "1021109",
+    "img": "assets/images/products/D15000100125622-210x210.jpg",
+    "stock": 2,
+    "delivery": "Срок поставки уточняйте у менеджера"
+  },
+  {
+    "id": 7,
+    "title": "Пневмоцилиндр Camozzi 63M2A063A0200",
+    "price": "11 100 ₽",
+    "code": "1021110",
+    "img": "assets/images/products/D15000100125627-210x210.jpg",
+    "stock": 8,
+    "delivery": "5-7 дней"
+  },
+  {
+    "id": 8,
+    "title": "Гидроцилиндр ГЦ 80.50.400.11",
+    "price": "13 600 ₽",
+    "code": "1021111",
+    "img": "assets/images/products/D15000100126206-210x210.jpg",
+    "stock": null,
+    "delivery": "2-4 недели"
+  },
+  {
+    "id": 9,
+    "title": "Пневмоцилиндр Airtac SC63X200",
+    "price": "8 500 ₽",
+    "code": "1021112",
+    "img": "assets/images/products/D15000100126220-210x210.jpg",
+    "stock": 15,
+    "delivery": "В наличии"
+  },
+  {
+    "id": 10,
+    "title": "Гидроцилиндр Parker HDA",
+    "price": "20 200 ₽",
+    "code": "1021113",
+    "img": "assets/images/products/D15000100126220-210x210.jpg",
+    "stock": 3,
+    "delivery": "1-2 недели"
+  },
+  {
+    "id": 11,
+    "title": "Пневмоцилиндр Festo DSNU-25-100-PPV-A",
+    "price": "10 700 ₽",
+    "code": "1021114",
+    "img": "assets/images/products/D15000100126220-210x210.jpg",
+    "stock": null,
+    "delivery": "Срок поставки уточняйте у менеджера"
+  },
+  {
+    "id": 12,
+    "title": "Гидроцилиндр Bosch Rexroth CDH2",
+    "price": "17 800 ₽",
+    "code": "1021115",
+    "img": "assets/images/products/D15000100126220-210x210.jpg",
+    "stock": 6,
+    "delivery": "3-5 дней"
+  }
+]

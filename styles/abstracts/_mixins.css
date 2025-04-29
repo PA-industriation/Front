@@ -1,8 +1,0 @@
-.flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.gap-main {
-    gap: var(--gap-main);
-}

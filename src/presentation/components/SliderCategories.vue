@@ -1,10 +1,14 @@
 <script setup>
 import 'vue3-carousel/carousel.css'
-import categoriesData from '../../../data/slider-categories.json'
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
-import { ref } from "vue"
 
-const sliderCategories = ref(categoriesData)
+defineProps({
+  categories: {
+    type: Array,
+    required: true
+  }
+});
+
 </script>
 
 <template>
@@ -24,7 +28,7 @@ const sliderCategories = ref(categoriesData)
       0: { itemsToShow: 1.5, gap: 6 }
     }"
   >
-    <Slide v-for="category in sliderCategories" :key="category.url">
+    <Slide v-for="category in categories" :key="category.url">
       <a :href="category.url" class="tag-btn">{{ category.title }}</a>
     </Slide>
     <template #addons>
@@ -35,7 +39,7 @@ const sliderCategories = ref(categoriesData)
 
 <style scoped>
 .tag-slider {
-  margin-bottom:20px;
+  margin-bottom: 5px;
   width: 100%;
 }
 
@@ -61,18 +65,35 @@ const sliderCategories = ref(categoriesData)
 
 :deep(.carousel__prev),
 :deep(.carousel__next) {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s;
-  background: #fff;
-  border: 2px solid #000;
-  border-radius: 100%;
+  transition: opacity 0.2s, box-shadow 0.2s;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .tag-slider:hover :deep(.carousel__prev),
 .tag-slider:hover :deep(.carousel__next) {
   opacity: 1;
   pointer-events: auto;
+}
+
+:deep(.carousel__prev svg),
+:deep(.carousel__next svg) {
+  width: 50px;
+  height: 50px;
+  color: #a1a1a1;
 }
 
 </style>

@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /*outline: 1px solid red;*/
 }
 
 html{
@@ -9,7 +10,6 @@ html{
 }
 
 body{
-    width: 1903px;
     font-family: 'ALSHauss', Tahoma, sans-serif;
     font-size: 1.3rem;
     line-height: 1.2;
@@ -17,7 +17,7 @@ body{
 }
 
 .container {
-    max-width: 140.8rem;
+    max-width: 144rem;
     margin: 0 auto;
     padding: 0 2.4rem;
     width: 100%;

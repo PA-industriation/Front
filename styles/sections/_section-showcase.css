@@ -4,9 +4,17 @@
     gap: 1.4rem;
     align-items: flex-start;
 }
+
+.category-showcase__grid--right {
+    display: grid;
+    grid-template-columns: 1fr 34rem;
+    gap: 1.4rem;
+    align-items: end;
+}
+
 .category-showcase__content {
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
+    gap: 0.8rem;
 }
