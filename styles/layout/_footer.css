@@ -1,99 +1,112 @@
+/* Основной контейнер футера */
 .site-footer {
-    margin-top: 4.5rem;
-    background: #4d575e;
-    color: #fff;
-    padding: 40px 0 0 0;
-    font-size: 1.3rem;
+    margin-top: var(--gap-xxl);
+    background: var(--color-bg-footer);
+    color: var(--color-bg-light);
+    padding: var(--section-padding) 0 0 0;
+    font-size: var(--font-size-base);
 
+    /* Контейнер для основного содержимого футера */
     .site-footer__container {
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        gap: 40px;
+        gap: var(--gap-xxl);
         justify-content: space-between;
         align-items: flex-start;
-        padding-bottom: 4rem;
+        padding-bottom: var(--section-padding);
 
+        /* Блоки контактов и навигации */
         .site-footer__contacts,
         .site-footer__nav-group {
             flex: 1 1 200px;
         }
 
+        /* Секция контактной информации */
         .site-footer__contacts {
             .site-footer__title {
-                font-size: 18px;
-                margin-bottom: 16px;
-                color: #fff;
+                font-size: var(--font-weight-medium);
+                margin-bottom: var(--gap-md);
+                color: var(--color-light);
             }
 
+            /* Контейнер для адреса и контактных данных */
             .site-footer__address {
                 display: flex;
                 flex-direction: column;
                 font-style: normal;
 
+                /* Стили для email и телефона */
                 .site-footer__email,
                 .site-footer__phone {
-                    font-size: 1.8rem;
-                    font-weight: 600;
-                    color: #fff;
+                    font-size: var(--font-weight-medium);
+                    font-weight: var(--font-weight-semibold);
+                    color: var(--color-light);
                     text-decoration: none;
                 }
 
+                /* Примечание под контактами */
                 .site-footer__note {
-                    font-size: 1.2rem;
-                    color: #bfc6c9;
-                    margin-bottom: 2rem;
+                    font-size: var(--font-size-sm);
+                    color: var(--color-grey-lighter);
+                    margin-bottom: var(--gap-lg);
                 }
 
+                /* Кнопка обратного звонка */
                 .site-footer__callback-btn {
                     width: 200px;
-                    margin-top: 12px;
-                    padding: 8px 20px;
-                    background: #2196f3;
-                    color: #fff;
+                    margin-top: var(--gap-sm);
+                    padding: var(--gap-xs) var(--gap-md);
+                    background: var(--color-brand-light);
+                    color: var(--color-light);
                     border: none;
-                    border-radius: 6px;
-                    font-size: 16px;
+                    border-radius: var(--border-radius-sm);
+                    font-size: var(--font-size-base);
                     cursor: pointer;
-                    transition: background 0.2s;
+                    transition: background var(--transition-base);
 
                     &:hover {
-                        background: #1769aa;
+                        background: var(--color-brand-hover);
                     }
                 }
             }
         }
 
+        /* Навигационная секция футера */
         .site-footer__nav {
             flex: 3 1 600px;
 
+            /* Список навигационных групп */
             .site-footer__nav-list {
                 display: flex;
-                gap: 40px;
+                gap: var(--gap-xxl);
                 list-style: none;
             }
 
+            /* Заголовки навигационных групп */
             .site-footer__nav-title {
-                font-size: 18px;
-                font-weight: 700;
-                margin-bottom: 16px;
-                color: #fff;
+                font-size: var(--font-size-lg);
+                font-weight: var(--font-weight-bold);
+                margin-bottom: var(--gap-md);
+                color: var(--color-light);
             }
 
+            /* Список ссылок в навигации */
             .site-footer__links {
                 list-style: none;
                 display: flex;
                 flex-direction: column;
-                gap: 1rem;
+                gap: var(--gap-sm);
 
+                /* Стили для отдельных ссылок */
                 .site-footer__link {
-                    font-size: 1.4rem;
-                    color: #bfc6c9;
+                    font-size: var(--font-size-base);
+                    color: var(--color-grey-lighter);
                     text-decoration: none;
-                    transition: color 0.2s;
+                    transition: color var(--transition-base);
 
                     &:hover {
-                        color: #2196f3;
+                        color: var(--color-brand-light);
                     }
                 }
             }
@@ -101,57 +114,62 @@
     }
 }
 
+/* Нижняя секция футера */
 .site-footer__bottom {
     border: none;
-    border-top: 1px solid #7c868a;
-    padding: 2.5rem 2rem;
+    border-top: 1px solid var(--color-grey);
+    padding: var(--gap-lg) var(--gap-md);
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: var(--gap-xxl);
     justify-content: space-between;
     align-items: center;
 }
 
+/* Секция с копирайтом */
 .site-footer__copyright {
-    font-size: 15px;
-    color: #fff;
+    font-size: var(--font-size-sm);
+    color: var(--color-light);
 
     .site-footer__rights {
-        font-size: 13px;
-        color: #bfc6c9;
-        margin: 4px 0 0 0;
+        font-size: var(--font-size-small);
+        color: var(--color-grey-lighter);
+        margin: var(--gap-xs) 0 0 0;
     }
 }
 
+/* Секция с дисклеймером и политикой конфиденциальности */
 .site-footer__disclaimer {
-    font-size: 14px;
-    color: #bfc6c9;
+    font-size: var(--font-size-sm);
+    color: var(--color-grey-lighter);
 
     .site-footer__privacy-link {
-        color: #fff;
-        margin-left: 8px;
+        color: var(--color-light);
+        margin-left: var(--gap-xs);
         text-decoration: underline;
-        transition: color 0.2s;
+        transition: color var(--transition-base);
 
         &:hover {
-            color: #2196f3;
+            color: var(--color-brand-light);
         }
     }
 }
 
+/* Секция с социальными иконками */
 .site-footer__social {
     display: flex;
-    gap: 12px;
+    gap: var(--gap-sm);
     align-items: center;
     flex: 1 1 120px;
     justify-content: flex-start;
 
+    /* Стили для иконок социальных сетей */
     .site-footer__social-icon {
         width: 32px;
         height: 32px;
         filter: grayscale(1) brightness(1.5);
-        transition: filter 0.2s;
+        transition: filter var(--transition-base);
 
         &:hover {
             filter: none;

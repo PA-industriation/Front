@@ -1,39 +1,47 @@
+/* Основной контейнер для карточек категорий */
 .category-showcase {
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: var(--section-padding) 0;
 
-    .category-showcase__card{
-        height: 456px;
-        min-height: 456px;
-        max-height: 456px;
+    /* Стили для отдельной карточки категории */
+    .category-showcase__card {
+        height: var(--card-height);
+        min-height: var(--card-min-height);
+        max-height: var(--card-max-height);
 
+        /* Стили для ссылки-обертки карточки */
         .category-showcase__card-link {
             display: flex;
             flex-direction: column;
             width: 100%;
             height: 100%;
-            border-radius: 18px;
+            border-radius: var(--card-border-radius);
             overflow: hidden;
-            background: linear-gradient(45deg, #0a28e9 0%, #79ccef 100%);
-            box-shadow: 0 6px 2.4rem 0 rgba(10,40,233,0.12);
+            /* Градиентный фон от синего к голубому */
+            background: var(--gradient-blue);
+            /* Тень для создания эффекта "парящей" карточки */
+            box-shadow: var(--card-shadow);
             text-decoration: none;
             position: relative;
-            transition: box-shadow 0.2s;
+            transition: box-shadow var(--transition-base);
 
+            /* Эффект при наведении - усиление тени */
             &:hover {
-                box-shadow: 0 1.2rem 3.6rem 0 rgba(10,40,233,0.22);
+                box-shadow: var(--card-shadow-hover);
             }
 
+            /* Контейнер для фонового изображения */
             .category-showcase__card-bg {
                 width: 100%;
-                height: 22rem;
+                height: var(--card-bg-height);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 background: transparent;
             }
 
+            /* Стили для изображения внутри карточки */
             .category-showcase__card-bg img {
                 max-width: 100%;
                 max-height: 150%;
@@ -42,23 +50,17 @@
                 display: block;
             }
 
+            /* Стили для заголовка карточки */
             .category-showcase__card-title {
-                color: #fff;
-                font-size: 2.6rem;
-                font-weight: 600;
-                padding: 1.5rem;
+                color: var(--color-light);
+                font-size: var(--font-size-xxl);
+                font-weight: var(--font-weight-semibold);
+                padding: var(--card-padding);
                 text-align: start;
-                text-shadow: 0 2px 8px rgba(10,40,233,0.22);
+                /* Тень для текста для лучшей читаемости на градиентном фоне */
+                text-shadow: 0 2px 8px rgba(10, 40, 233, 0.22);
                 letter-spacing: 0.01em;
             }
         }
     }
-
-
 }
-
-
-
-
-
-

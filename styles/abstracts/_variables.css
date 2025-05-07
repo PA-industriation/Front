@@ -1,36 +1,112 @@
 :root {
-    /* Font size */
-    --font-primary: 1.3rem;
+    /* Font Sizes */
+    --font-size-small: 0.8rem;
+    --font-size-sm: 1.2rem;
+    --font-size-base: 1.4rem;
+    --font-size-md: 1.6rem;
+    --font-size-lg: 1.8rem;
+    --font-size-xl: 2rem;
+    --font-size-xll: 2.4rem;
+    --font-size-xxl: 2.6rem;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
 
     /* Colors */
-    --color-primary: #0094ff;
-    --color-subtitle: #959595;
-    --color-text-link: #587b8e;
-    --color-primary-hover: #007ad6;
+    --color-light: #fff;
+    --color-dark: #222;
+    --color-grey: #474747;
+    --color-grey-light: #bbb;
+    --color-grey-lighter: #bfc6c9;
+
+    /* Brand Colors */
+    --color-brand: #0094ff;
+    --color-brand-hover: #007ad6;
+    --color-brand-dark: #0095d8;
+    --color-brand-light: #2196f3;
+
+    /* Accent Colors */
     --color-accent: #ff9c00;
     --color-accent-hover: #ffa000;
-    --color-text-main: #222;
-    --color-text-muted: #474747;
-    --color-white: #fff;
+    --color-accent-light: #ffb74d;
+
+    /* Text Colors */
+    --color-text-primary: #222;
+    --color-text-secondary: #474747;
+    --color-text-link: #587b8e;
+    --color-text-subtitle: #959595;
+    --color-text-title: #0095d8;
+
+    /* Background Colors */
+    --color-bg-footer: #4d575e;
     --color-bg-hover: #f5f5f5;
-    --color-grey-light: #bbb;
+    --color-bg-light: #fff;
+    --color-bg-dark: #141c24;
+
+    /* Border & Divider Colors */
     --color-border: #e5e5e5;
-    --color-title: #0095d8;
+    --color-border-light: #e3e8ee;
 
-    /* Shadow */
+    /* Layout Sizes */
+    --header-height: 4.4rem;
+    --container-max-width: 144rem;
+    --container-padding: 2.4rem;
 
-    --shadow-dropdown: 0 4px 24px rgba(0,0,0,0.10);
+    /* Shadows */
+    --shadow-dropdown: 0 4px 24px rgba(0, 0, 0, 0.1);
+    --shadow-card: 0 2px 8px rgba(44, 62, 80, 0.03);
+    --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.37);
+    --shadow-button: 0 2px 8px rgba(255, 152, 0, 0.08);
 
-    /* border */
+    /* Border Radius */
     --border-radius: 0.8rem;
+    --border-radius-sm: 0.6rem;
     --border-radius-lg: 1.2rem;
-    --border-radius-sm: 0.2rem;
+    --border-radius-xl: 1.8rem;
 
-    /* gap */
-    --gap-main: 2.5rem;
-
-    --gap-sm: 0.8rem;
+    /* Spacing */
+    --gap-xs: 0.8rem;
+    --gap-sm: 1rem;
     --gap-md: 1.4rem;
-    --gap-lg: 2.8rem;
+    --gap-lg: 2.4rem;
+    --gap-xl: 2.8rem;
+    --gap-xxl: 4rem;
 
+    /* Transitions */
+    --transition-base: 0.2s;
+    --transition-fast: 0.15s;
+
+    /* Z-index */
+    --z-dropdown: 10;
+    --z-modal: 100;
+    --z-overlay: 99;
+
+    /* Gradients */
+    --gradient-blue: linear-gradient(45deg, #2b74f4 0%, #45afe3 100%);
+    --gradient-green: linear-gradient(45deg, #43a431 0%, #96dd0c 100%);
+    --gradient-purple: linear-gradient(45deg, #9f43a5 0%, #e87aef 100%);
+    --gradient-darkgreen: linear-gradient(45deg, #006064 0%, #028a90 100%);
+    --gradient-orange: linear-gradient(45deg, #f28039 0%, #f3b055 100%);
+    --gradient-grey: linear-gradient(45deg, #525262 0%, #727486 100%);
+
+    /* New Variables */
+    --section-padding: 4rem;
+    --card-height: 45.6rem;
+    --card-min-height: 45.6rem;
+    --card-max-height: 45.6rem;
+    --card-bg-height: 22rem;
+    --card-padding: 1.5rem;
+    --card-border-radius: 1.8rem;
+    --card-shadow: 0 6px 2.4rem 0 rgba(10, 40, 233, 0.12);
+    --card-shadow-hover: 0 1.2rem 3.6rem 0 rgba(10, 40, 233, 0.22);
+    --advantage-height: 23.5rem;
+    --advantage-padding: 3.2rem 1.8rem 2.4rem;
+    --advantage-border: 1.5px solid var(--color-border-light);
+    --advantage-border-radius: 1rem;
+    --advantage-icon-size: 5rem;
+    --advantage-circle-size: 6rem;
+    --advantage-circle-border: 4px solid var(--color-brand);
 }

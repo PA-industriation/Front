@@ -1,0 +1,23 @@
+{
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "printWidth": 120,
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "endOfLine": "lf",
+    "trailingComma": "es5",
+    "cssDeclarationSorting": "off",
+    "overrides": [
+        {
+            "files": ["*.css", "*.scss"],
+            "options": {
+                "singleQuote": false,
+                "tabWidth": 4,
+                "bracketSpacing": true,
+                "cssDeclarationSorting": "off"
+            }
+        }
+    ]
+}

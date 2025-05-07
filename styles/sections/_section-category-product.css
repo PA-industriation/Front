@@ -1,91 +1,98 @@
+/* Основной контейнер для категорий продуктов */
 .category-product {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: var(--gap-sm);
     justify-content: space-between;
+
+    /* Стили для отдельных карточек категорий */
+    .category-product__item {
+        flex: 1 1 0;
+        min-width: 25rem;
+        height: 20rem;
+        border-radius: var(--border-radius-lg);
+        padding: var(--gap-lg);
+        font-weight: var(--font-weight-medium);
+        font-size: var(--font-size-lg);
+        display: flex;
+
+        position: relative;
+        overflow: hidden;
+        box-shadow: var(--shadow-card);
+        cursor: pointer;
+
+        /* Эффект при наведении и фокусе */
+        &:hover,
+        &:focus {
+            box-shadow: var(--shadow-card-hover);
+        }
+    }
+
+    /* Стили для ссылок внутри карточек */
+    .category-product__item a {
+        width: 50%;
+    }
+
+    /* Стили для текста внутри карточек */
+    .category-product__item span {
+        position: relative;
+        z-index: 2;
+        color: var(--color-light);
+        margin-bottom: var(--gap-md);
+    }
+
+    /* Стили для изображений внутри карточек */
+    .category-product__item img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: 3rem;
+        max-height: 17rem;
+        max-width: 17rem;
+        z-index: 1;
+        object-fit: contain;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    /* Цветовые схемы для разных категорий */
+    .category-product__item--sensors {
+        background-color: #c74dd0; /* Фиолетовый для сенсоров */
+    }
+
+    .category-product__item--distributors {
+        background-color: #0a8e8e; /* Бирюзовый для дистрибьюторов */
+    }
+
+    .category-product__item--air {
+        background-color: #f7923d; /* Оранжевый для воздушных систем */
+    }
+
+    .category-product__item--tubes {
+        background-color: #5a5e66; /* Серый для труб */
+    }
+
+    /* Градиентные фоны для специальных категорий */
+    .category-product__item--control {
+        background: linear-gradient(45deg, #2b74f4 0%, #45afe3 100%); /* Синий градиент для систем управления */
+    }
+
+    .category-product__item--electric {
+        background: linear-gradient(45deg, #43a431 0%, #96dd0c 100%); /* Зеленый градиент для электрических систем */
+    }
+
+    .category-product__item--block {
+        background: linear-gradient(45deg, #536189 0%, #6e82b7 100%); /* Сине-серый градиент для блоков */
+    }
+
+    .category-product__item--cabel {
+        background: linear-gradient(45deg, #43a431 0%, #96dd0c 100%); /* Зеленый градиент для кабелей */
+    }
+
+    /* Дублирующиеся стили для span - возможно стоит удалить */
+    .category-product__item span {
+        position: relative;
+        z-index: 2;
+        margin-bottom: var(--gap-md);
+    }
 }
-
-.category-product__item {
-    flex: 1 1 0;
-    min-width: 250px;
-    height: 200px;
-    border-radius: 12px;
-    padding: 20px;
-    font-weight: 500;
-    font-size: 18px;
-    display: flex;
-
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
-
-.category-product__item:hover,
-.category-product__item:focus{
-    box-shadow: 0px 2px 15px #000;
-}
-
-.category-product__item a {
-    width: 50%;
-}
-
-.category-product__item span {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.category-product__item img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 30px;
-    max-height: 170px;
-    max-width: 170px;
-    z-index: 1;
-    object-fit: contain;
-    pointer-events: none;
-    user-select: none;
-}
-
-.category-product__item--sensors {
-    background-color: #c74dd0;
-}
-
-.category-product__item--distributors {
-    background-color: #0a8e8e;
-}
-
-.category-product__item--air {
-    background-color: #f7923d;
-}
-
-.category-product__item--tubes {
-    background-color: #5a5e66;
-}
-
-.category-product__item--control {
-    background: linear-gradient(45deg, #2b74f4 0%, #45afe3 100%);
-}
-
-.category-product__item--electric {
-    background: linear-gradient(45deg, #43a431 0%, #96dd0c 100%);
-}
-
-.category-product__item--block {
-    background: linear-gradient(45deg, #536189 0%, #6e82b7 100%);
-}
-
-.category-product__item--cabel {
-    background: linear-gradient(45deg, #43a431 0%, #96dd0c 100%);
-}
-
-.category-product__item span {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 15px;
-}
-
-

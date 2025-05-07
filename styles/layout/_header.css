@@ -1,13 +1,17 @@
+/* Основной контейнер шапки сайта */
 header {
-    margin-bottom: 3rem;
+    margin-bottom: var(--gap-xl);
 
+    /* Верхняя секция шапки - содержит контактную информацию и авторизацию */
     .header__top {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: var(--font-primary);
-        color: var(--color-text-muted);
-        padding-top: 5px;
+        font-size: var(--font-size-base);
+        color: var(--color-text-secondary);
+        padding-top: var(--gap-xs);
+
+        /* Список контактных данных */
         ul {
             display: flex;
             height: 2rem;
@@ -15,28 +19,31 @@ header {
             align-items: center;
 
             li {
-
-                 a {
-                    color: var(--color-text-muted);
+                /* Стили для ссылок в верхней секции */
+                a {
+                    color: var(--color-text-secondary);
                     text-decoration: none;
-                    transition: color 0.2s;
+                    transition: color var(--transition-base);
 
                     &:hover {
-                        color: var(--color-primary);
+                        color: var(--color-brand);
                     }
                 }
 
+                /* Отступ между элементами списка */
                 &:not(:last-child) {
-                    margin-right: 2.5rem;
+                    margin-right: var(--gap-lg);
                 }
             }
         }
 
+        /* Блок авторизации */
         .header__auth {
-            font-size: var(--font-primary);
+            font-size: var(--color-brand);
             color: var(--color-text-link);
             cursor: pointer;
 
+            /* Стили для всплывающей формы */
             .form-popup {
                 color: var(--color-text-link);
                 text-decoration: none;
@@ -44,33 +51,34 @@ header {
             }
 
             .form-popup:hover {
-                color: var(--color-primary-hover);
+                color: var(--color-brand-hover);
             }
         }
     }
 
+    /* Средняя секция шапки - содержит логотип, поиск и контакты */
     .header__middle {
-        height: 4.4rem;
-        margin-top: 3.5rem;
-        margin-bottom: 4rem;
+        height: var(--color-brand);
+        margin: var(--gap-lg) 0;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
         white-space: nowrap;
 
+        /* Контейнер логотипа */
         .header__logo-link {
             max-width: 28.2rem;
             width: 100%;
             height: 100%;
-
             display: block;
 
             .header__logo {
-                height: 4.4rem;
+                height: var(--header-height);
             }
         }
 
+        /* Блок поиска */
         .header__search {
             max-width: 52rem;
             width: 100%;
@@ -78,156 +86,175 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: 5.2rem;
+            margin-left: var(--gap-xl);
 
+            /* Контейнер поисковой строки */
             .header__search-box {
                 width: 100%;
                 display: flex;
                 align-items: center;
-                background: var(--color-white);
-                border: 2px solid var(--color-primary);
+                background: var(--color-light);
+                border: 2px solid var(--color-brand);
                 border-radius: var(--border-radius);
                 overflow: hidden;
-                height: 4.4rem;
+                height: var(--header-height);
 
+                /* Поле ввода поиска */
                 input[type="search"] {
                     width: 100%;
                     height: 100%;
-                    border: 8px;
-                    border-radius: 2px solid var(--color-primary);
-                    font-size: var(--font-primary);
+                    border: var(--gap-xs);
+                    border-radius: 2px solid var(--color-brand);
+                    font-size: var(--font-size-base);
                     outline: none;
-                    padding: 0 1.6rem;
-                    color: var(--color-subtitle);
+                    padding: 0 var(--gap-lg);
+                    color: var(--color-grey-light);
                 }
 
+                /* Кнопка поиска */
                 button {
                     width: 4rem;
                     height: 2.6rem;
                     background: none;
                     border: none;
                     cursor: pointer;
-                    color: var(--color-primary);
+                    color: var(--color-brand);
                 }
 
                 button i {
-                    font-size: 2.4rem;
-                    color: var(--color-primary);
+                    font-size: var(--font-size-xll);
+                    color: var(--color-brand);
                 }
 
+                /* Кнопка очистки поиска */
                 .header__search-clear {
-                    margin-left: 0.8rem;
+                    margin-left: var(--gap-xs);
                     color: var(--color-grey-light);
                     cursor: pointer;
                 }
             }
         }
 
+        /* Блок контактной информации */
         .header__contacts {
             display: flex;
-            gap: 1rem;
-            margin: 3.2rem;
+            gap: var(--gap-sm);
+            margin: var(--gap-xl);
 
-            .header__mail, .header__phone {
+            /* Стили для email и телефона */
+            .header__mail,
+            .header__phone {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
 
                 .title {
-                    color: var(--color-primary);
-                    font-size: 1.8rem;
+                    color: var(--color-brand);
+                    font-size: var(--font-size-lg);
                     text-decoration: none;
                     white-space: nowrap;
                 }
 
                 .subtitle {
-                    color: var(--color-subtitle);
-                    font-size: 1.1rem;
+                    color: var(--color-grey-light);
+                    font-size: var(--font-size-base);
                 }
             }
         }
 
+        /* Блок действий (корзина, избранное и т.д.) */
         .header__actions {
             display: flex;
             align-items: center;
-            gap: 1.4rem;
+            gap: var(--gap-md);
 
+            /* Стили для каждого действия */
             .header__action {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                color: var(--color-text-muted);
-                font-size: 1.2rem;
+                color: var(--color-text-link);
+                font-size: var(--font-size-base);
                 cursor: pointer;
                 min-width: 6rem;
 
-                .name { margin-top: 0.2rem; }
+                .name {
+                    margin-top: 0.2rem;
+                }
             }
 
             .header__action i {
-                font-size: 2rem;
-                color: var(--color-subtitle);
+                font-size: var(--font-size-xl);
+                color: var(--color-text-subtitle);
                 line-height: 1;
             }
 
+            /* Стили для корзины */
             .header__cart {
                 position: relative;
 
+                /* Счетчик товаров в корзине */
                 .header__cart-count {
                     position: absolute;
                     top: -0.8rem;
                     right: -1rem;
                     background: var(--color-accent);
-                    color: #fff;
-                    font-size: 1.2rem;
-                    font-weight: bold;
+                    color: var(--color-light);
+                    font-size: var(--color-brand);
+                    font-weight: var(--font-weight-bold);
                     border-radius: 50%;
                     padding: 0.2rem 0.7rem;
                     min-width: 2.2rem;
                     text-align: center;
                 }
-
             }
         }
     }
 
+    /* Нижняя секция шапки - содержит навигацию и каталог */
     .header__end {
-        background: var(--color-white);
-        border-radius: 8px;
+        background: var(--color-light);
+        border-radius: var(--border-radius);
         border: 1px solid var(--color-border);
         padding: 0;
 
+        /* Основная навигация */
         .header__nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            height: 4.3rem;
+            height: var(--header-height);
 
+            /* Кнопка каталога */
             .header__catalog {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
 
+            /* Стили кнопки каталога */
             .catalog-menu__button {
                 display: flex;
                 align-items: center;
-                gap: 0.8rem;
-                background: var(--color-primary);
-                color: var(--color-white);
+                gap: var(--gap-xs);
+                background: var(--color-brand);
+                color: var(--color-light);
                 border: none;
                 border-radius: var(--border-radius) 0 0 var(--border-radius);
-                padding: 0 1.6rem 0 2.9rem;
-                height: 4.3rem;
-                font-size: 1.4rem;
-                font-weight: 400;
+                padding: 0 var(--gap-lg) 0 var(--gap-xl);
+                height: var(--header-height);
+                font-size: var(--font-size-base);
+                font-weight: var(--font-weight-regular);
                 cursor: pointer;
-                transition: background 0.2s;
+                transition: background var(--transition-base);
                 min-width: 14rem;
 
-                &:hover { background: var(--color-primary-hover); }
+                &:hover {
+                    background: var(--color-brand-hover);
+                }
 
+                /* Иконка каталога (три линии) */
                 .catalog-menu__icon {
                     display: flex;
                     flex-direction: column;
@@ -238,49 +265,52 @@ header {
                     .catalog-menu__line {
                         width: 1.8rem;
                         height: 0.2rem;
-                        background: var(--color-white);
+                        background: var(--color-light);
                         border-radius: 0.2rem;
                     }
                 }
             }
 
+            /* Основное меню навигации */
             .header__nav-menu {
                 display: flex;
                 align-items: center;
                 list-style: none;
                 padding: 1.7rem;
-                font-size: 1.4rem;
+                font-size: var(--color-brand);
 
                 li a {
-                    color: var(--color-text-main);
+                    color: var(--color-text-primary);
                     text-decoration: none;
-                    font-weight: 500;
-                    font-size: var(--font-primary);
-                    transition: color 0.2s;
+                    font-weight: var(--font-weight-medium);
+                    font-size: var(--color-brand);
+                    transition: color var(--transition-base);
 
                     &:hover,
                     &:focus {
-                        color: var(--color-primary-hover);
+                        color: var(--color-brand-hover);
                         text-decoration: none;
                     }
                 }
-
             }
 
+            /* Кнопка заказа */
             .header__order-btn {
-                width: 14.1rem;
-                justify-content: center;
-                background: var(--color-accent);
-                color: var(--color-white);
-                border-radius: 0 var(--border-radius) var(--border-radius) 0;
-                height: 4.3rem;
                 display: flex;
                 align-items: center;
-                font-size: 1.4rem;
+                justify-content: center;
+                font-size: var(--font-size-base);
+                width: 14.1rem;
+                background: var(--color-accent);
+                color: var(--color-light);
+                border-radius: 0 var(--border-radius) var(--border-radius) 0;
+                height: var(--header-height);
                 cursor: pointer;
-                transition: background 0.2s;
+                transition: background var(--transition-base);
 
-                &:hover { background: var(--color-accent-hover); }
+                &:hover {
+                    background: var(--color-accent-hover);
+                }
             }
         }
     }

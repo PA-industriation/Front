@@ -1,54 +1,63 @@
-.catalog-section__header{
-    margin-top: 4rem;
-}
+/* Секция каталога - основной контейнер */
+.catalog-section {
+    /* Заголовок секции каталога */
+    .catalog-section__header {
+        margin-top: var(--section-padding);
+    }
 
-.catalog__title{
-    font-size: 2.4rem;
-    font-weight: 600;
-    padding: 10px 0 22px;
-}
+    /* Основной заголовок каталога */
+    .catalog__title {
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-semibold);
+        padding: 10px 0 22px;
+    }
 
-.catalog-section__title{
-    font-size: 2rem;
-    font-weight: 600;
-}
+    /* Заголовок подсекции каталога */
+    .catalog-section__title {
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-semibold);
+    }
 
-.catalog-section__count{
-    font-size: 1.5rem;
-    color: rgb(139, 139, 139);
-}
+    /* Счетчик элементов в каталоге */
+    .catalog-section__count {
+        font-size: var(--font-size-sm);
+        color: var(--color-text-subtitle);
+    }
 
-.catalog-section__grid{
-    display: grid;
-    gap: 1.2rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+    /* Сетка каталога - 4 колонки с отступами */
+    .catalog-section__grid {
+        display: grid;
+        gap: var(--gap-sm);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
-.bg-purpel-to-pink{
-    background: linear-gradient(45deg, #9f43a5 0%, #e87aef 100%);
-}
+        /* Градиентные фоны для карточек каталога */
+        .bg-purpel-to-pink {
+            background: var(--gradient-purple);
+        }
 
-.bg-darkgreen-to-green{
-    background: linear-gradient(45deg, #006064 0%, #028a90 100%);
-}
+        .bg-darkgreen-to-green {
+            background: var(--gradient-darkgreen);
+        }
 
-.bg-orange-to-lightorange{
-    background: linear-gradient(45deg, #f28039 0%, #f3b055 100%);
-}
+        .bg-orange-to-lightorange {
+            background: var(--gradient-orange);
+        }
 
-.bg-dark-to-grey{
-    background: linear-gradient(45deg, #525262 0%, #727486 100%);
-}
+        .bg-dark-to-grey {
+            background: var(--gradient-grey);
+        }
 
-.bg-blue-to-lightblue{
-    background: linear-gradient(45deg, #2b74f4 0%, #45afe3 100%);
-}
+        .bg-blue-to-lightblue {
+            background: var(--gradient-blue);
+        }
 
-.bg-green-to-lightgreen{
-    background: linear-gradient(45deg, #43a431 0%, #96dd0c 100%);
-}
+        .bg-green-to-lightgreen {
+            background: var(--gradient-green);
+        }
 
-.bg-blue-to-green{
-    background: linear-gradient(45deg, #536189 0%, #6e82b7 100%);
+        /* Специальный градиент для определенных карточек */
+        .bg-blue-to-green {
+            background: linear-gradient(45deg, #536189 0%, #6e82b7 100%);
+        }
+    }
 }
-

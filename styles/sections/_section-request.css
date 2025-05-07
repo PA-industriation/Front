@@ -1,64 +1,72 @@
+/* Секция запроса - основной контейнер */
 .request {
-    margin: 48px 0 0 0;
+    margin: var(--gap-xxl) 0 0 0;
     padding: 0;
-}
 
-.request__container {
-    background-image: url("/assets/images/home-form.jpg");
-    background-repeat: no-repeat;
-    background-size: auto 23rem;
-    background-position: 66% 45px;
-    display: flex;
-    align-items: flex-start;
-    gap: 48px;
-    max-width: 100%;
-    padding: 70px 0;
-}
+    /* Внутренний контейнер с фоновым изображением и flex-разметкой */
+    .request__container {
+        background-image: url("/assets/images/home-form.jpg");
+        background-repeat: no-repeat;
+        background-size: auto 23rem;
+        background-position: 66% 45px;
+        display: flex;
+        align-items: flex-start;
+        gap: var(--gap-xxl);
+        max-width: 100%;
+        padding: var(--section-padding) 0;
 
-.request__title {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 28px;
-    color: #222;
-}
+        /* Заголовок секции */
+        .request__title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--gap-xl);
+            color: var(--color-text-primary);
+        }
 
-.request__text {
-    font-size: 1.5rem;
-    color: #333;
-    line-height: 1.5;
-    margin-bottom: 4rem;
-}
+        /* Описательный текст */
+        .request__text {
+            font-size: var(--font-size-md);
+            color: var(--color-text-secondary);
+            line-height: 1.5;
+            margin-bottom: var(--gap-xxl);
+        }
 
-.request__button {
-    display: inline-block;
-    background: #ff9800;
-    color: #fff;
-    font-size: 1.4rem;
-    font-weight: 500;
-    padding: 12px 32px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.2s;
-    box-shadow: 0 2px 8px rgba(255,152,0,0.08);
-}
+        /* Кнопка действия */
+        .request__button {
+            display: inline-block;
+            background: var(--color-accent);
+            color: var(--color-light);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+            padding: var(--gap-sm) var(--gap-xl);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background var(--transition-base);
+            box-shadow: var(--shadow-button);
+        }
 
-.request__button:hover,
-.request__button:focus {
-    background: #ffb74d;
-    outline: none;
-}
+        /* Состояния наведения и фокуса для кнопки */
+        .request__button:hover,
+        .request__button:focus {
+            background: var(--color-accent-light);
+            outline: none;
+        }
 
-.request__image {
-    flex: 0 0 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        /* Контейнер для изображения */
+        .request__image {
+            flex: 0 0 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.request__image img {
-    width: 120px;
-    height: auto;
-    display: block;
-    opacity: 0.9;
+        /* Стили для изображения внутри контейнера */
+        .request__image img {
+            width: 120px;
+            height: auto;
+            display: block;
+            opacity: 0.9;
+        }
+    }
 }
